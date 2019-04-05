@@ -1,4 +1,4 @@
-# Date-Night
+# Date Night
 A web app that finds your location and shows what events are happening that day.
 
 ## Languages/Tools Used
@@ -30,7 +30,7 @@ A web app that finds your location and shows what events are happening that day.
   - Peak time
   - Hours
   
-- API's used
+## API's used
   - Google Maps
   - Yelp
   - StubHub

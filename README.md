@@ -9,6 +9,10 @@ A web app that finds your location and shows what events are happening that day.
 - JSON
 - AJAX
 - API
+  - Google Maps
+  - Yelp
+  - StubHub
+  - EventBrite
 - JQuery
 - Firebase
 
@@ -30,9 +34,6 @@ A web app that finds your location and shows what events are happening that day.
   - Peak time
   - Hours
   
-## API's used
-  - Google Maps
-  - Yelp
-  - StubHub
-  - EventBrite
+
+
 

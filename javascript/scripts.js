@@ -6,6 +6,10 @@ console.warn('Project One JS Initialized');
 //__________________________________________________________
 //GLOBAL VARIABLES
 //__________________________________________________________
+	var gps =  $(".gps").val();
+
+
+	
   
   //________________________________________________________
   //Price Button Variables
@@ -60,7 +64,10 @@ console.warn('Project One JS Initialized');
     var activities5 = $(".activities5").val();
     
     // Activity button input field
-    var activityEntry = $(".activities_entry");
+		var activityEntry = $(".activities_entry");
+
+
+		
   //________________________________________________________
 //__________________________________________________________
 
@@ -115,14 +122,14 @@ console.warn('Project One JS Initialized');
 
     $(".activities5").on("click", function(){
       activityEntry.attr("value", activities5);
-    })
-  //________________________________________________________
+		})
+		
+		var activityEntryValue = $(".activities_entry").val();
+
+
+  //______________________________________________________
 
 //________________________________________________________
-
-
-
- 
 
 /* eslint-enable */
 
@@ -147,7 +154,7 @@ $("#submit").on("click", function() {
     $.ajax({
       url: yelpURL,
       headers: {
-        'Authorization': 'Bearer ' + yelpAPIKey,
+      	'Authorization': 'Bearer ' + yelpAPIKey,
             },
         method: "GET",
         dataType: 'json' 

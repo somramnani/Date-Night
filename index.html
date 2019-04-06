@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
+  <!--<body background="C:\Users\tonyk\OneDrive\Pictures\Saved Pictures\concert.jpg">-->
+  <!--<body background="C:\Users\tonyk\OneDrive\Pictures\Saved Pictures\hongkong.jpg">-->
+  <!--<body background="C:\Users\tonyk\OneDrive\Pictures\Saved Pictures\beach-background-4.jpg">-->
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">DATE NIGHT NIRVANA</a>
@@ -22,7 +26,9 @@
               Instructions
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">search for stuff for you and your bish</a>
+              <a class="dropdown-item" href="#"><p>enter your desired location, it searches a 15 mile radius</p>
+                <p>Enter your desired budget, $ least expensive $$$$$ most expensive.</p> 
+                <p>Click what ACTIVITIES you want to do. Enjoy perusing your options!</p></a>
             </div>
           </li>
         </ul>
@@ -33,59 +39,63 @@
     <form>
       <div class="form-group">
         <label for="exampleFormControlInput1">Location</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="where you at?">
+        <input type="location" class="form-control gps" id="exampleFormControlInput1" placeholder="Zip Code OR City and State">
       </div>
       <div class="form-group">
         <label for="exampleFormControlSelect1">What is your budget?</label>
-        <select class="form-control" id="exampleFormControlSelect1">
-          <option>$</option>
-          <option>$$</option>
-          <option>$$$</option>
-          <option>$$$$</option>
-        </select>
-      </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            </div>
+
+
+              <button type="button" class="btn btn-outline-info price1 button1" value ="$">$</button>
+              <button type="button" class="btn btn-outline-warning price2 button2" value ="$$">$$</button>
+              <button type="button" class="btn btn-outline-primary price3 button3" value ="$$$">$$$</button>
+              <button type="button" class="btn btn-outline-success price4 button4" value ="$$$$">$$$$</button>
+              <button type="button" class="btn btn-outline-danger price5 button5" value ="$$$$$">$$$$$</button>
+
+            </div>
+            <input type="text" class="form-control price_entry" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
       <div class="form-group">
         <label for="exampleFormControlSelect2">Activities!</label>
-        <select multiple class="form-control" id="exampleFormControlSelect2">
-          <option>Restaurants</option>
-          <option>Theatres</option>
-          <option>Sport Events</option>
-          <option>Concerts</option>
-          <option>Local Events</option>
-        </select>
+        <br>
+        <div class="input-group mb-3">
+        </div>
+        <button type="button" class="btn btn-outline-info activities1" value = "Restaurant">Restaurants</button>
+        <button type="button" class="btn btn-outline-warning activities2" value = "Theatre">Theatres</button>
+        <button type="button" class="btn btn-outline-primary activities3" value = "Sport-Events">Sport Events</button>
+        <button type="button" class="btn btn-outline-success activities4" value = "Concerts" >Concerts</button>
+        <button type="button" class="btn btn-outline-danger activities5" value = "Local-Events">Local Events</button>
+        </form>
+      
       </div>
+        <input type="text" class="form-control activities_entry" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div>
+
+      <br>
+      <div class="container">
       <button type="button" class="btn btn-primary">Find your perfect date!</button>
-    </form>
+    </div>
+  </div>
+
+
   </div>
   <br>
   <div class="container">
-      <div class="row">
-        <div class="col-sm">
-          <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-        </div>
-        <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-          </div>
-          <div class="col-sm">
-              <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-            </div>
-         </div>
-     </div>
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Restaurants</th>
+              <th scope="col">Theatres</th>
+              <th scope="col">Sport Events</th>
+              <th scope="col">Concerts</th>
+              <th scope="col">Local Events</th>
+            </tr>
+          </thead>
+          </tbody>
+        </table>
+      
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

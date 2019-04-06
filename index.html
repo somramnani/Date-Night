@@ -37,13 +37,17 @@
       </div>
       <div class="form-group">
         <label for="exampleFormControlSelect1">What is your budget?</label>
-        <select class="form-control price_form" id="exampleFormControlSelect1">
-          <option class = "price">$</option>
-          <option class = "price2">$$</option>
-          <option class = "price">$$$</option>
-          <option class ="price">$$$$</option>
-        </select>
-      </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            </div>
+              <button type="button" class="btn btn-info price1 button1" value ="$">$</button>
+              <button type="button" class="btn btn-warning price2 button2" value ="$$">$$</button>
+              <button type="button" class="btn btn-primary price3 button3" value ="$$$">$$$</button>
+              <button type="button" class="btn btn-success price4 button4" value ="$$$$">$$$$</button>
+              <button type="button" class="btn btn-danger price5 button5" value ="$$$$$">$$$$$</button>
+            </div>
+            <input type="text" class="form-control price_entry" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
       <div class="form-group">
         <label for="exampleFormControlSelect2">Activities!</label>
         <select multiple class="form-control" id="exampleFormControlSelect2">
@@ -59,6 +63,18 @@
   </div>
   <br>
   <div class="container">
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Restaurants</th>
+              <th scope="col">Theatres</th>
+              <th scope="col">Sport Events</th>
+              <th scope="col">Concerts</th>
+              <th scope="col">Local Events</th>
+            </tr>
+          </thead>
+          </tbody>
+        </table>
       <div class="row">
         <div class="col-sm">
           <div class="card" style="width: 18rem;">

@@ -1,17 +1,8 @@
 
 /* General Styles
    ========================================================================== */
-   .wrapWithBackgroundImage {
-    background-image: url("https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjp3oOo6LvhAhXk7IMKHYdhDMgQjRx6BAgBEAU&url=http%3A%2F%2Fsfwallpaper.com%2Fcategories%2Fbeach-background-hd.html&psig=AOvVaw0qKcP_Ga4UAT5EKYsJeTLQ&ust=1554651628150906");
-}
-.invisibleLink {
-    display: block;
-    left: 55px; top: 55px;
-    position: absolute;
-    height: 55px ;
-    width: 55px;
-}
 
+   
 /* ========================================================================== */ 
 
 

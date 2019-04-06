@@ -53,7 +53,7 @@ console.warn('Project One JS Initialized');
 
 //__________________________________________________________
  
-=======
+
 /* eslint-enable */
 
 // rating, price, url, photo/image-url

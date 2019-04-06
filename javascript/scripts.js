@@ -93,33 +93,34 @@ console.warn('Project One JS Initialized');
     })
   //________________________________________________________
 
-   //________________________________________________________
+   
+  //________________________________________________________
   //Activity On-Click Functions
   //________________________________________________________
-  $(".activities1").on("click", function(){
-    activityEntry.attr("value", activities1);
-  })
+    $(".activities1").on("click", function(){
+      activityEntry.attr("value", activities1);
+    })
 
-  $(".activities2").on("click", function(){
-    activityEntry.attr("value", activities2);
-  })
-  
-  $(".activities3").on("click", function(){
-    activityEntry.attr("value", activities3);
-  })
-  
-  $(".activities4").on("click", function(){
-    activityEntry.attr("value", activities4);
-  })
-  
-  $(".activities5").on("click", function(){
-    activityEntry.attr("value", activities5);
-  })
+    $(".activities2").on("click", function(){
+      activityEntry.attr("value", activities2);
+    })
+
+    $(".activities3").on("click", function(){
+      activityEntry.attr("value", activities3);
+    })
+
+    $(".activities4").on("click", function(){
+      activityEntry.attr("value", activities4);
+    })
+
+    $(".activities5").on("click", function(){
+      activityEntry.attr("value", activities5);
+    })
+  //________________________________________________________
+
 //________________________________________________________
 
-//________________________________________________________
 
-//__________________________________________________________
 
  
 

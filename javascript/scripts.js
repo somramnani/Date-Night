@@ -181,7 +181,7 @@ $("#submit").on("click", function() {
         console.log(response);
     })
 
-=======
+
         console.log(resultArray);
   })
 

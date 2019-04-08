@@ -2,20 +2,17 @@
 /* eslint-disable */
 console.warn('Project One JS Initialized');
 
-
 //__________________________________________________________
 //GLOBAL VARIABLES
 //__________________________________________________________
   
   // Location Input
   var gps =  $(".gps").val();
-
   
   var lat;
   var lng;
   var address = "54 Tracy Drive, Manalapan, NJ 07726";
-  
-  
+
   //________________________________________________________
   //Price Button Variables
   //________________________________________________________
@@ -37,7 +34,7 @@ console.warn('Project One JS Initialized');
 //BUTTON FUNCTIONS
 //__________________________________________________________
   
-//________________________________________________________
+  //________________________________________________________
   //Price Button On-Click Functions
   //________________________________________________________
     $(".price1").on("click", function(){
@@ -84,6 +81,9 @@ console.warn('Project One JS Initialized');
   //________________________________________________________
   //Price Button On-Click Functions
   //________________________________________________________
+    
+    //If one of the $ is selected, then make the input value(priceEntry) value that price
+
     $(".price1").on("click", function(){
       priceEntry.attr("value", price1);
     })
@@ -103,12 +103,18 @@ console.warn('Project One JS Initialized');
     $(".price5").on("click", function(){
       priceEntry.attr("value", price5 );
     })
+
+    // The input value of activities
+		var priceEntryValue = $(".price_entry").val();
   //________________________________________________________
 
    
   //________________________________________________________
   //Activity On-Click Functions
   //________________________________________________________
+    
+    //If one of the activities is selected, then make the input value(priceEntry) value that price  
+
     $(".activities1").on("click", function(){
       activityEntry.attr("value", activities1);
     })
@@ -129,7 +135,7 @@ console.warn('Project One JS Initialized');
       activityEntry.attr("value", activities5);
 		})
     
-    // The input value of activities`
+    // The input value of activities
 		var activityEntryValue = $(".activities_entry").val();
   //______________________________________________________
 

@@ -33,7 +33,7 @@ console.warn('Project One JS Initialized');
     // Price button input field
     var priceEntry = $(".price_entry");
   //________________________________________________________
-  
+
 
   //________________________________________________________
   //Activities Button Variables
@@ -82,9 +82,6 @@ console.warn('Project One JS Initialized');
     $(".price5").on("click", function(){
       priceEntry.attr("value", price5 );
     })
-
-    // The input value of activities
-		var priceEntryValue = $(".price_entry").val();
   //________________________________________________________
 
    
@@ -114,14 +111,23 @@ console.warn('Project One JS Initialized');
       activityEntry.attr("value", activities5);
 		})
     
-    // The input value of activities
-		var activityEntryValue = $(".activities_entry").val();
+
   //______________________________________________________
 
   //________________________________________________________
   //Price Button On-Click Functions
   //_______________________________________________________
+
     $("#submit").on("click", function() {
+
+      // The input value of activities
+		  var priceEntryValue = $(".price_entry").val();
+      console.log(priceEntryValue);
+
+      // This is the input value of activities: 
+      var activityEntryValue = $(".activities_entry").val();
+      console.log(activityEntryValue);
+
       var addressInput = $("#location").val().trim();
       var yelpAPIKey = "V3BqWR13gf4DYXvRewAG0jVi7K7Xy-yLxjzRTFA29eZPdSiS1aFqyxVXq1PNP2e_m4Xl8cDdypAroctE4HFsP0ZY7_oGX0Xmvm7kZ6_WtTMAqCx2k_qljY0j3qymXHYx"
       var yelpURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + addressInput;
@@ -140,13 +146,19 @@ console.warn('Project One JS Initialized');
           dataType: 'json' 
 
         }).then(function(response) {
+           // var resultArray = [];
             console.warn("<--------yelp results----->");
-            console.log(response)
-            var resultArray = [];
+            console.log(response);
+
             for(i = 0; i < response.businesses.length; i++){        
-              resultArray.push([i]);
-            }
-          })
+              // resultArray.push([i]);
+              var price = response.businesses[i].price;
+
+              if (priceEntryValue === price){
+                console.log(response.businesses[i]);
+              }
+          }                  
+        })
       
       $.ajax({
         url: eventbriteURL,
@@ -155,7 +167,7 @@ console.warn('Project One JS Initialized');
             console.warn("<------eventbrite results------->");
             console.log(response);
         })
-        console.log(resultArray);
+        // console.log(resultArray);
     })
   //_______________________________________________________
 

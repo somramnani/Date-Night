@@ -111,12 +111,12 @@ console.warn('Project One JS Initialized');
       activityEntry.attr("value", activities5);
 		})
     
-
   //______________________________________________________
 
-  //________________________________________________________
+
+  //______________________________________________________
   //Price Button On-Click Functions
-  //_______________________________________________________
+  //______________________________________________________
 
     $("#submit").on("click", function() {
 
@@ -150,12 +150,24 @@ console.warn('Project One JS Initialized');
             console.warn("<--------yelp results----->");
             console.log(response);
 
-            for(i = 0; i < response.businesses.length; i++){        
-              // resultArray.push([i]);
-              var price = response.businesses[i].price;
+            for(i = 0; i < response.businesses.length; i++){   
+              // Restauraunt Results Row
+              var newRow = $("<tr>");
+              var restaurauntDiv  = $("#restaurant-results");
 
-              if (priceEntryValue === price){
+              // resultArray.push([i]);
+
+              // API information stored into variables
+              var price = response.businesses[i].price;
+              var image = response.businesses[i].image_url;
+              var location = response.businesses[i].location;
+              var name = response.businesses[i].name;
+
+              // If the user clicks price, and restaraunts display the specific budget and Restaurants.
+              if (priceEntryValue === price  && activityEntryValue === "Restaurants" ) {
                 console.log(response.businesses[i]);
+                newRow.html(name);
+                restaurauntDiv.append(newRow);
               }
           }                  
         })

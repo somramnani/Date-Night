@@ -169,7 +169,7 @@ console.warn('Project One JS Initialized');
               // If the user clicks price, and restaraunts display the specific budget and Restaurants.
               if (priceEntryValue === price  && activityEntryValue === "Restaurants" ) {
                 console.log(response.businesses[i]);
-                let restBtn = $("<a>").addClass("resultBtn m-2").html(name).attr("href", webURL);
+                let restBtn = $("<a>").addClass("resultBtn m-2").html(name).attr("href", webURL).attr("data-toggle", "popover").attr("title", "information").attr("data-content", "information goes here");
                 restaurauntDiv.append(restBtn);
 
               }

@@ -114,11 +114,9 @@ console.warn('Project One JS Initialized');
   //______________________________________________________
 
 
-
   //______________________________________________________
-  //Price Button On-Click Functions
+  //Price Button On-Click Submit Functions
   //______________________________________________________
-
 
     $("#submit").on("click", function() {
 
@@ -129,6 +127,22 @@ console.warn('Project One JS Initialized');
       // This is the input value of activities: 
       var activityEntryValue = $(".activities_entry").val();
       console.log(activityEntryValue);
+
+       
+      //______________________________________________________
+      //API VARIABLES
+      //______________________________________________________
+
+        var addressInput = $("#location").val().trim();
+        var yelpAPIKey = "V3BqWR13gf4DYXvRewAG0jVi7K7Xy-yLxjzRTFA29eZPdSiS1aFqyxVXq1PNP2e_m4Xl8cDdypAroctE4HFsP0ZY7_oGX0Xmvm7kZ6_WtTMAqCx2k_qljY0j3qymXHYx"
+        var yelpURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + addressInput;
+
+        var eventbriteAPIKey = "QHHRQKYP5TZBK3NVPHD2";
+        var eventbriteURL = "https://www.eventbriteapi.com/v3/events/search/?location.address=" + addressInput + "&token=QHHRQKYP5TZBK3NVPHD2";
+        var OAuthKey = "QHHRQKYP5TZBK3NVPHD2";
+        var eventSearchURL = "https://cors-anywhere.herokuapp.com/https://www.eventbriteapi.com/v3/events/search?location.address=" + addressInput;
+      //______________________________________________________
+
 
       var addressInput = $("#location").val().trim();
       var yelpAPIKey = "V3BqWR13gf4DYXvRewAG0jVi7K7Xy-yLxjzRTFA29eZPdSiS1aFqyxVXq1PNP2e_m4Xl8cDdypAroctE4HFsP0ZY7_oGX0Xmvm7kZ6_WtTMAqCx2k_qljY0j3qymXHYx"
@@ -167,42 +181,84 @@ console.warn('Project One JS Initialized');
               // API information stored into variables
               var price = response.businesses[i].price;
 
+              var image = response.businesses[i].image_url;
+              var webURL = response.businesses[i].url;
+
               var name = response.businesses[i].name;
 
               // If the user clicks price, and restaraunts display the specific budget and Restaurants.
               if (priceEntryValue === price  && activityEntryValue === "Restaurants" ) {
                 console.log(response.businesses[i]);
-                newRow.html(name);
-                restaurauntDiv.append(newRow);
+                let restBtn = $("<a>").addClass("resultBtn m-2").html(name).attr("href", webURL);
+                restaurauntDiv.append(restBtn);
+
               }
           }                  
         })
+
       
-      $.ajax({
-        url: eventbriteURL,
-        method: "GET"
-        }).then(function(response) {
-            console.warn("<------eventbrite results------->");
-            console.log(response);
+      //______________________________________________________
+      //API'S AJAX REQUEST
+      //______________________________________________________
+        
+        $.ajax({
+          url: yelpURL,
+          headers: {
+            'Authorization': 'Bearer ' + yelpAPIKey,    
+          },    
+          method: "GET",
+            dataType: 'json' 
 
-            var localEventsRow = $("#localevents-results");
-          
-           
+          }).then(function(response) {
+              // var resultArray = [];
+              console.warn("<--------yelp results----->");
+              console.log(response);
 
+              for(i = 0; i < response.businesses.length; i++){   
+                // Restauraunt Results Row
+                var newRow = $("<tr>");
+                var restaurauntDiv  = $("#restaurant-results");
+                var restarauntsParralaxDiv = $(".restaurant-parralax")
 
-            for (let i = 0; i < response.events.length; i++){
-              var name = response.events[i].name.html;
-              if (activityEntryValue === "Local-Events" ) {
-                console.log(response.events[i]);
-                localEventsRow.append(name);
-               
+                // resultArray.push([i]);
+
+                // API information stored into variables
+                var price = response.businesses[i].price;
+
+                var name = response.businesses[i].name;
+
+                // If the user clicks price, and restaraunts display the specific budget and Restaurants.
+                if (priceEntryValue === price  && activityEntryValue === "Restaurants" ) {
+                  console.log(response.businesses[i]);
+                  newRow.html(name);
+                  restaurauntDiv.append(newRow);
+                }
+            }                  
+          })
+        
+        $.ajax({
+          url: eventbriteURL,
+          method: "GET"
+          }).then(function(response) {
+
+              console.warn("<------eventbrite results------->");
+              console.log(response);
+
+              var localEventsRow = $("#localevents-results");
+
+              for (let i = 0; i < response.events.length; i++){
+                var name = response.events[i].name.html;
+                
+                if (activityEntryValue === "Local-Events" ) {
+                  console.log(response.events[i]);
+                  localEventsRow.append(name);
+                }
               }
-
-              
-            }
-        })
-        // console.log(resultArray);
-    })
+          })
+          // console.log(resultArray);
+      })
+    //______________________________________________________
+  
   //_______________________________________________________
 
 //________________________________________________________

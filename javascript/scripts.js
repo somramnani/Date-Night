@@ -6,16 +6,23 @@ console.warn('Project One JS Initialized');
 //GLOBAL VARIABLES
 //__________________________________________________________
   
-  // Location Input
-  var gps =  $(".gps").val();
+  //________________________________________________________
+  //Location Variables
+  //________________________________________________________
   
-  var lat;
-  var lng;
-  var address = "54 Tracy Drive, Manalapan, NJ 07726";
+    // Location Input
+    var gps =  $(".gps").val();
+    
+    var lat;
+    var lng;
+    var address = "54 Tracy Drive, Manalapan, NJ 07726";
+  //________________________________________________________
+
 
   //________________________________________________________
   //Price Button Variables
   //________________________________________________________
+    
     //Price Button value variables 
     var price1 = $(".price1").val();
     var price2 = $(".price2").val();
@@ -26,35 +33,7 @@ console.warn('Project One JS Initialized');
     // Price button input field
     var priceEntry = $(".price_entry");
   //________________________________________________________
-
-//__________________________________________________________
-
-
-//__________________________________________________________
-//BUTTON FUNCTIONS
-//__________________________________________________________
   
-  //________________________________________________________
-  //Price Button On-Click Functions
-  //________________________________________________________
-    $(".price1").on("click", function(){
-      priceEntry.attr("value", price1);
-    })
-
-    $(".price2").on("click", function(){
-      priceEntry.attr("value", price2);
-    })
-    $(".price3").on("click", function(){
-      priceEntry.attr("value", price3);
-    })
-    $(".price4").on("click", function(){
-      priceEntry.attr("value", price4);
-    })
-    $(".price5").on("click", function(){
-      priceEntry.attr("value", price5 );
-    })
-  //________________________________________________________
-
 
   //________________________________________________________
   //Activities Button Variables

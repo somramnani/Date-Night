@@ -7,6 +7,8 @@
     <meta name="description" content="Project 1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="icon" type="image/png" href="images/calender-favicon.png">
+
     <!-- **************Bootstrap Links************** -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -80,6 +82,7 @@
             <!-- Price Input -->
             <input type="text" class="form-control price_entry" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
+
           
           <!-- Activities Form -->
           <div class="form-group">
@@ -87,8 +90,8 @@
             <br>
             <div class="input-group mb-3">
            
-            <button type="button" class="btn btn-outline-info activities1" value = "Restaurant">Restaurants</button>
-            <button type="button" class="btn btn-outline-warning activities2" value = "Theatre">Theatres</button>
+            <button type="button" class="btn btn-outline-info activities1" value = "Restaurants">Restaurants</button>
+            <button type="button" class="btn btn-outline-warning activities2" value = "Theatres">Theatres</button>
             <button type="button" class="btn btn-outline-primary activities3" value = "Sport-Events">Sport Events</button>
             <button type="button" class="btn btn-outline-success activities4" value = "Concerts" >Concerts</button>
             <button type="button" class="btn btn-outline-danger activities5" value = "Local-Events">Local Events</button>  
@@ -98,6 +101,7 @@
           <input type="text" class="form-control activities_entry" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">    
         </div>  
       </form>  
+
     </div>
           <!-- Parallax Image-->
     <div class="parallax2">
@@ -108,7 +112,10 @@
 
     <!-- Submit Button -->
     <div class="container">
-      <button type="button " class="btn btn-primary" style = "display: block; margin: 0 auto;" id ="submit">Find your perfect date!</button>  
+
+      <button type="button " class="btn btn-primary" id ="submit" style = "display: block; margin: 0 auto;" id ="submit">Find your perfect date!</button>  
+
+
     </div>    
   </div>  
     <!-- Parallax Image-->
@@ -129,6 +136,10 @@
             <th scope="col">Concerts</th>
             <th scope="col">Local Events</th>  
           </tr>
+          
+        <!-- Restaurant Results -->  
+        <tr id = "restaurant-results"></tr>
+        
         </thead>
       </tbody>  
     </table>  

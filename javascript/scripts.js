@@ -6,16 +6,23 @@ console.warn('Project One JS Initialized');
 //GLOBAL VARIABLES
 //__________________________________________________________
   
-  // Location Input
-  var gps =  $(".gps").val();
+  //________________________________________________________
+  //Location Variables
+  //________________________________________________________
   
-  var lat;
-  var lng;
-  var address = "54 Tracy Drive, Manalapan, NJ 07726";
+    // Location Input
+    var gps =  $(".gps").val();
+    
+    var lat;
+    var lng;
+    var address = "54 Tracy Drive, Manalapan, NJ 07726";
+  //________________________________________________________
+
 
   //________________________________________________________
   //Price Button Variables
   //________________________________________________________
+    
     //Price Button value variables 
     var price1 = $(".price1").val();
     var price2 = $(".price2").val();
@@ -25,34 +32,6 @@ console.warn('Project One JS Initialized');
     
     // Price button input field
     var priceEntry = $(".price_entry");
-  //________________________________________________________
-
-//__________________________________________________________
-
-
-//__________________________________________________________
-//BUTTON FUNCTIONS
-//__________________________________________________________
-  
-  //________________________________________________________
-  //Price Button On-Click Functions
-  //________________________________________________________
-    $(".price1").on("click", function(){
-      priceEntry.attr("value", price1);
-    })
-
-    $(".price2").on("click", function(){
-      priceEntry.attr("value", price2);
-    })
-    $(".price3").on("click", function(){
-      priceEntry.attr("value", price3);
-    })
-    $(".price4").on("click", function(){
-      priceEntry.attr("value", price4);
-    })
-    $(".price5").on("click", function(){
-      priceEntry.attr("value", price5 );
-    })
   //________________________________________________________
 
 
@@ -103,9 +82,6 @@ console.warn('Project One JS Initialized');
     $(".price5").on("click", function(){
       priceEntry.attr("value", price5 );
     })
-
-    // The input value of activities
-		var priceEntryValue = $(".price_entry").val();
   //________________________________________________________
 
    
@@ -135,14 +111,25 @@ console.warn('Project One JS Initialized');
       activityEntry.attr("value", activities5);
 		})
     
-    // The input value of activities
-		var activityEntryValue = $(".activities_entry").val();
   //______________________________________________________
 
-  //________________________________________________________
+
+
+  //______________________________________________________
   //Price Button On-Click Functions
-  //_______________________________________________________
+  //______________________________________________________
+
+
     $("#submit").on("click", function() {
+
+      // The input value of activities
+		  var priceEntryValue = $(".price_entry").val();
+      console.log(priceEntryValue);
+
+      // This is the input value of activities: 
+      var activityEntryValue = $(".activities_entry").val();
+      console.log(activityEntryValue);
+
       var addressInput = $("#location").val().trim();
       var yelpAPIKey = "V3BqWR13gf4DYXvRewAG0jVi7K7Xy-yLxjzRTFA29eZPdSiS1aFqyxVXq1PNP2e_m4Xl8cDdypAroctE4HFsP0ZY7_oGX0Xmvm7kZ6_WtTMAqCx2k_qljY0j3qymXHYx"
       var yelpURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + addressInput;
@@ -161,13 +148,31 @@ console.warn('Project One JS Initialized');
           dataType: 'json' 
 
         }).then(function(response) {
+           // var resultArray = [];
             console.warn("<--------yelp results----->");
-            console.log(response)
-            var resultArray = [];
-            for(i = 0; i < response.businesses.length; i++){        
-              resultArray.push([i]);
-            }
-          })
+            console.log(response);
+
+            for(i = 0; i < response.businesses.length; i++){   
+              // Restauraunt Results Row
+              var newRow = $("<tr>");
+              var restaurauntDiv  = $("#restaurant-results");
+
+              // resultArray.push([i]);
+
+              // API information stored into variables
+              var price = response.businesses[i].price;
+              var image = response.businesses[i].image_url;
+              var location = response.businesses[i].location;
+              var name = response.businesses[i].name;
+
+              // If the user clicks price, and restaraunts display the specific budget and Restaurants.
+              if (priceEntryValue === price  && activityEntryValue === "Restaurants" ) {
+                console.log(response.businesses[i]);
+                newRow.html(name);
+                restaurauntDiv.append(newRow);
+              }
+          }                  
+        })
       
       $.ajax({
         url: eventbriteURL,
@@ -176,11 +181,12 @@ console.warn('Project One JS Initialized');
             console.warn("<------eventbrite results------->");
             console.log(response);
         })
-        console.log(resultArray);
+        // console.log(resultArray);
     })
   //_______________________________________________________
 
 //________________________________________________________
+
 
 
 

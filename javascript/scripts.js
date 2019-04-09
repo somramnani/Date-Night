@@ -159,8 +159,7 @@ console.warn('Project One JS Initialized');
 
               // API information stored into variables
               var price = response.businesses[i].price;
-              var image = response.businesses[i].image_url;
-              var location = response.businesses[i].location;
+
               var name = response.businesses[i].name;
 
               // If the user clicks price, and restaraunts display the specific budget and Restaurants.
@@ -178,6 +177,22 @@ console.warn('Project One JS Initialized');
         }).then(function(response) {
             console.warn("<------eventbrite results------->");
             console.log(response);
+
+            var localEventsRow = $("#localevents-results");
+          
+           
+
+
+            for (let i = 0; i < response.events.length; i++){
+              var name = response.events[i].name.html;
+              if (activityEntryValue === "Local-Events" ) {
+                console.log(response.events[i]);
+                localEventsRow.append(name);
+               
+              }
+
+              
+            }
         })
         // console.log(resultArray);
     })

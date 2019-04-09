@@ -7,6 +7,8 @@
     <meta name="description" content="Project 1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="icon" type="image/png" href="images/calender-favicon.png">
+
     <!-- **************Bootstrap Links************** -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -79,8 +81,8 @@
             <br>
             <div class="input-group mb-3">
            
-            <button type="button" class="btn btn-outline-info activities1" value = "Restaurant">Restaurants</button>
-            <button type="button" class="btn btn-outline-warning activities2" value = "Theatre">Theatres</button>
+            <button type="button" class="btn btn-outline-info activities1" value = "Restaurants">Restaurants</button>
+            <button type="button" class="btn btn-outline-warning activities2" value = "Theatres">Theatres</button>
             <button type="button" class="btn btn-outline-primary activities3" value = "Sport-Events">Sport Events</button>
             <button type="button" class="btn btn-outline-success activities4" value = "Concerts" >Concerts</button>
             <button type="button" class="btn btn-outline-danger activities5" value = "Local-Events">Local Events</button>  
@@ -96,7 +98,7 @@
 
     <!-- Submit Button -->
     <div class="container">
-      <button type="button " class="btn btn-primary" id ="submit">Find your perfect date!</button>  
+      <button type="button" class="btn btn-primary" id ="submit">Find your perfect date!</button>  
     </div>    
   </div>  
 
@@ -113,6 +115,10 @@
             <th scope="col">Concerts</th>
             <th scope="col">Local Events</th>  
           </tr>
+          
+        <!-- Restaurant Results -->  
+        <tr id = "restaurant-results"></tr>
+        
         </thead>
       </tbody>  
     </table>  

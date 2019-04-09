@@ -1,6 +1,23 @@
 
 /* General Styles
+<
+   ========================================================================== */
+   body{
+    background-color:whitesmoke;
+}
+
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+    background: rgb(216, 212, 212);
+    font-size: 24 px;
+    padding: 25px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
 ========================================================================== */
+
 
    
 /* ========================================================================== */ 
@@ -8,7 +25,21 @@
 
 /* Font Styles
 ========================================================================== */ 
-
+.animated{
+    text-align: center;
+    font-size: 100px;
+    color: white;
+}
+#headerText{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+.imageTitle{
+    text-align: center;
+    font-size: 75px;
+    color: white;
+}
 /* ========================================================================== */ 
 
 
@@ -16,7 +47,30 @@
 
 /* Image Styles
 ========================================================================== */ 
-
+.parallaxHeader{
+    background: url('../images/peter-lewicki-411606-unsplash.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+}
+.parallax2{
+    background: url('../images/derek-story-1488490-unsplash.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+}
+.parallax3{
+    background: url('../images/matthieu-huang-549064-unsplash.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+}
+.parallax4{
+    background: url('../images/vishnu-r-nair-639172-unsplash.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+}
 
 /* ========================================================================== */ 
 
@@ -25,6 +79,9 @@
 ========================================================================== */ 
 
 /* ========================================================================== */ 
+
+
+
 
 
 

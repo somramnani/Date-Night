@@ -153,6 +153,11 @@ console.warn('Project One JS Initialized');
       var OAuthKey = "QHHRQKYP5TZBK3NVPHD2";
       var eventSearchURL = "https://cors-anywhere.herokuapp.com/https://www.eventbriteapi.com/v3/events/search?location.address=" + addressInput;
         
+      var fandangoApiKey = "ncpps2jdywggp62dwfegnruz";
+      var fandangoSecretKey = "BmyAFhX3EV";
+      var fandangoURL = "";
+      var fandangoSearchURL = "";
+
       $.ajax({
         url: yelpURL,
         headers: {
@@ -176,13 +181,17 @@ console.warn('Project One JS Initialized');
               // API information stored into variables
               var price = response.businesses[i].price;
 
+              var image = response.businesses[i].image_url;
+              var webURL = response.businesses[i].url;
+
               var name = response.businesses[i].name;
 
               // If the user clicks price, and restaraunts display the specific budget and Restaurants.
               if (priceEntryValue === price  && activityEntryValue === "Restaurants" ) {
                 console.log(response.businesses[i]);
-                newRow.html(name);
-                restaurauntDiv.append(newRow);
+                let restBtn = $("<a>").addClass("resultBtn m-2").html(name).attr("href", webURL);
+                restaurauntDiv.append(restBtn);
+
               }
           }                  
         })

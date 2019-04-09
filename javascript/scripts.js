@@ -127,6 +127,7 @@ console.warn('Project One JS Initialized');
       // This is the input value of activities: 
       var activityEntryValue = $(".activities_entry").val();
       console.log(activityEntryValue);
+
        
       //______________________________________________________
       //API VARIABLES
@@ -141,6 +142,51 @@ console.warn('Project One JS Initialized');
         var OAuthKey = "QHHRQKYP5TZBK3NVPHD2";
         var eventSearchURL = "https://cors-anywhere.herokuapp.com/https://www.eventbriteapi.com/v3/events/search?location.address=" + addressInput;
       //______________________________________________________
+
+
+      var addressInput = $("#location").val().trim();
+      var yelpAPIKey = "V3BqWR13gf4DYXvRewAG0jVi7K7Xy-yLxjzRTFA29eZPdSiS1aFqyxVXq1PNP2e_m4Xl8cDdypAroctE4HFsP0ZY7_oGX0Xmvm7kZ6_WtTMAqCx2k_qljY0j3qymXHYx"
+      var yelpURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + addressInput + "&limit=6";
+
+      var eventbriteAPIKey = "QHHRQKYP5TZBK3NVPHD2";
+      var eventbriteURL = "https://www.eventbriteapi.com/v3/events/search/?location.address=" + addressInput + "&token=QHHRQKYP5TZBK3NVPHD2";
+      var OAuthKey = "QHHRQKYP5TZBK3NVPHD2";
+      var eventSearchURL = "https://cors-anywhere.herokuapp.com/https://www.eventbriteapi.com/v3/events/search?location.address=" + addressInput;
+        
+      $.ajax({
+        url: yelpURL,
+        headers: {
+          'Authorization': 'Bearer ' + yelpAPIKey,    
+        },    
+        method: "GET",
+          dataType: 'json' 
+
+        }).then(function(response) {
+           // var resultArray = [];
+            console.warn("<--------yelp results----->");
+            console.log(response);
+
+            for(i = 0; i < response.businesses.length; i++){   
+              // Restauraunt Results Row
+              var newRow = $("<tr>");
+              var restaurauntDiv  = $("#restaurant-results");
+
+              // resultArray.push([i]);
+
+              // API information stored into variables
+              var price = response.businesses[i].price;
+
+              var name = response.businesses[i].name;
+
+              // If the user clicks price, and restaraunts display the specific budget and Restaurants.
+              if (priceEntryValue === price  && activityEntryValue === "Restaurants" ) {
+                console.log(response.businesses[i]);
+                newRow.html(name);
+                restaurauntDiv.append(newRow);
+              }
+          }                  
+        })
+
       
       //______________________________________________________
       //API'S AJAX REQUEST

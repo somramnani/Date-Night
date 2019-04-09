@@ -9,18 +9,22 @@
 .container{
     max-width: 960px;
     margin: 0 auto;
-    background: rgb(216, 212, 212);
+    background: lightblue;
     font-size: 24 px;
     padding: 25px;
     margin-bottom: 25px;
     justify-content: center;
 }
 
+
 .restaurant-parralax{
     background-color: white;
 } 
 /* 
 ==========================================================================  */
+
+/*========================================================================== */
+
 
 
    

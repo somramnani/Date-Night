@@ -4,6 +4,8 @@ A web app that finds your location and shows what events are happening that day.
 ## Languages/Tools Used
 - HTML5
 - CSS3
+  - Parralax
+  - Animate.css
 - Bootstrap
 - JavaScript
 - JSON
@@ -15,6 +17,7 @@ A web app that finds your location and shows what events are happening that day.
   - EventBrite
 - JQuery
 - Firebase
+
 
 
 ## Features

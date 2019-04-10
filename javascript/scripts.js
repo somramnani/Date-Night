@@ -5,17 +5,7 @@ console.warn('Project One JS Initialized');
 //__________________________________________________________
 //GLOBAL VARIABLES
 //__________________________________________________________
-  
-  //________________________________________________________
-  //Location Variables
-  //________________________________________________________
-  
-    // Location Input
-    var gps =  $(".gps").val();
-    
-    var lat;
-    var lng;
-    var address = "54 Tracy Drive, Manalapan, NJ 07726";
+
   //________________________________________________________
 
 
@@ -141,10 +131,8 @@ console.warn('Project One JS Initialized');
         var OAuthKey = "QHHRQKYP5TZBK3NVPHD2";
         var eventSearchURL = "https://cors-anywhere.herokuapp.com/https://www.eventbriteapi.com/v3/events/search?location.address=" + addressInput;
         
-        var fandangoApiKey = "ncpps2jdywggp62dwfegnruz";
-        var fandangoSecretKey = "BmyAFhX3EV";
-        var fandangoURL = "";
-        var fandangoSearchURL = "";
+        let placesAPIKey = "AIzaSyBXO-BuPfu7ZFeL1Cebncm3ojSMaIbNFk0";
+        let placesURL = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=theaters+in+" + addressInput + "&key=" + placesAPIKey;
       //______________________________________________________
       
       //______________________________________________________
@@ -178,12 +166,13 @@ console.warn('Project One JS Initialized');
               var webURL = response.businesses[i].url;
               var location = response.businesses[i].location;
               var name = response.businesses[i].name;
+              var lat = response.businesses[i].coordinates.latitude;
+              var long = response.businesses[i].coordinates.longitude;
 
               // If the user clicks price, and restaraunts display the specific budget and Restaurants.
               if (priceEntryValue === price  && activityEntryValue === "Restaurants" ) {
                 console.log(response.businesses[i]);
                 let restBtn = $("<a>").addClass("resultBtn m-2").html(name).attr("href", webURL).attr("data-toggle", "popover").attr("title", "information").attr("data-content", "information  here").attr("target", "_blank");
-              
                 restaurauntDiv.append(restBtn);
               }
           }                  
@@ -208,6 +197,24 @@ console.warn('Project One JS Initialized');
                 }
               }
           })
+
+        $.ajax({
+          url: placesURL,
+          method: "GET"
+        }).then(function(response) {
+          console.warn('----google places-----')
+
+          for(i = 0; i < response.results.length; i++) {
+            console.log('theater name: ' + response.results[i].name);
+            console.log('street address: ' + response.results[i].formatted_address);
+            console.log('user rating: ' + response.results[i].rating);
+
+            var theaterName = response.results[i].name;
+            var theaterAddress = response.results[i].formatted_address;
+            var theaterRating = response.results[i].rating;
+          }
+        })
+
           // console.log(resultArray);
       })
     //______________________________________________________

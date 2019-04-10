@@ -119,7 +119,6 @@ console.warn('Project One JS Initialized');
   //Price Button On-Click Functions
   //______________________________________________________
 
-
     $("#submit").on("click", function() {
 
       // The input value of activities
@@ -129,25 +128,24 @@ console.warn('Project One JS Initialized');
       // This is the input value of activities: 
       var activityEntryValue = $(".activities_entry").val();
       console.log(activityEntryValue);
-
-
+      
       //______________________________________________________
       //API VARIABLES
       //______________________________________________________
-      
-      var addressInput = $("#location").val().trim();
-      var yelpAPIKey = "V3BqWR13gf4DYXvRewAG0jVi7K7Xy-yLxjzRTFA29eZPdSiS1aFqyxVXq1PNP2e_m4Xl8cDdypAroctE4HFsP0ZY7_oGX0Xmvm7kZ6_WtTMAqCx2k_qljY0j3qymXHYx"
-      var yelpURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + addressInput + "&limit=6";
+        var addressInput = $("#location").val().trim();
+        var yelpAPIKey = "V3BqWR13gf4DYXvRewAG0jVi7K7Xy-yLxjzRTFA29eZPdSiS1aFqyxVXq1PNP2e_m4Xl8cDdypAroctE4HFsP0ZY7_oGX0Xmvm7kZ6_WtTMAqCx2k_qljY0j3qymXHYx"
+        var yelpURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + addressInput + "&limit=6";
 
-      var eventbriteAPIKey = "QHHRQKYP5TZBK3NVPHD2";
-      var eventbriteURL = "https://www.eventbriteapi.com/v3/events/search/?location.address=" + addressInput + "&token=QHHRQKYP5TZBK3NVPHD2";
-      var OAuthKey = "QHHRQKYP5TZBK3NVPHD2";
-      var eventSearchURL = "https://cors-anywhere.herokuapp.com/https://www.eventbriteapi.com/v3/events/search?location.address=" + addressInput;
-      
-      var fandangoApiKey = "ncpps2jdywggp62dwfegnruz";
-      var fandangoSecretKey = "BmyAFhX3EV";
-      var fandangoURL = "";
-      var fandangoSearchURL = "";
+        var eventbriteAPIKey = "QHHRQKYP5TZBK3NVPHD2";
+        var eventbriteURL = "https://www.eventbriteapi.com/v3/events/search/?location.address=" + addressInput + "&token=QHHRQKYP5TZBK3NVPHD2";
+        var OAuthKey = "QHHRQKYP5TZBK3NVPHD2";
+        var eventSearchURL = "https://cors-anywhere.herokuapp.com/https://www.eventbriteapi.com/v3/events/search?location.address=" + addressInput;
+        
+        var fandangoApiKey = "ncpps2jdywggp62dwfegnruz";
+        var fandangoSecretKey = "BmyAFhX3EV";
+        var fandangoURL = "";
+        var fandangoSearchURL = "";
+      //______________________________________________________
       
       //______________________________________________________
       //API'S AJAX REQUEST
@@ -169,7 +167,8 @@ console.warn('Project One JS Initialized');
             for(i = 0; i < response.businesses.length; i++){   
               // Restauraunt Results Row
               var newRow = $("<tr>");
-              var restaurauntDiv  = $("#restaurant-results");
+              var restaurauntDiv  = $(".restaurant-parralax");
+              
 
               // resultArray.push([i]);
 
@@ -184,8 +183,8 @@ console.warn('Project One JS Initialized');
               if (priceEntryValue === price  && activityEntryValue === "Restaurants" ) {
                 console.log(response.businesses[i]);
                 let restBtn = $("<a>").addClass("resultBtn m-2").html(name).attr("href", webURL).attr("data-toggle", "popover").attr("title", "information").attr("data-content", "information  here").attr("target", "_blank");
+              
                 restaurauntDiv.append(restBtn);
-
               }
           }                  
         })

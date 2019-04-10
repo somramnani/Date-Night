@@ -3,7 +3,12 @@
 <
    ========================================================================== */
    body{
-    background-color:whitesmoke;
+    background-color:black;
+}
+
+footer{
+    font:white;
+    text-align: center;
 }
 
 .container{
@@ -17,8 +22,8 @@
 }
 
 
+
 /* ========================================================================== */
-=======
 
 .restaurant-parralax{
     background-color: white;

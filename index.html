@@ -16,7 +16,6 @@
 
     <!-- Animate CSS Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    
     <!-- style.css link -->
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -110,45 +109,55 @@
         </div>  
       </form>  
 
-
-    <!-- Submit Button -->
     <div class="container no-gutter">
       <button type="button " class="btn btn-primary" id ="submit" style = "display: block; margin: 0 auto;" id ="submit">Find your perfect date!</button>  
     </div>    
  
 
     </div>
-  
 
-      
- 
-
+    <br>
   <!-- Columns for the Results -->
-  <div class="container">
-      <table class="table">
-        <thead>
+  <div class="container no-gutter">
+    <table class="table">
+      <thead>
+       
+          <th scope="col">Restaurants</th>
+            <th scope="col">Theatres</th>
+            <th scope="col">Sport Events</th>
+            <th scope="col">Concerts</th>
          
-            <th scope="col">Restaurants</th>
-              <th scope="col">Theatres</th>
-              <th scope="col">Sport Events</th>
-              <th scope="col">Concerts</th>
-           
-           
-            <th scope="col">Local Events</th>  
-            <tr id = "localevents-results"></tr>
-            
-          <!-- Restaurant Results -->  
-          <tr id = "restaurant-results"></tr>
-          <tr id = "theatres-results"></tr>
-          <tr id = "sportingevents-results"></tr>
-          <tr id = "concerts-results"></tr>
+         
+          <th scope="col">Local Events</th>  
+          <tr id = "localevents-results"></tr>
+          
+        <!-- Restaurant Results -->  
+        <tr id = "restaurant-results"></tr>
+        <tr id = "theatres-results"></tr>
+        <tr id = "sportingevents-results"></tr>
+        <tr id = "concerts-results"></tr>
+      
+        
+        </thead>
+      </tbody>  
+    </table>  
+  </div>
+    <!-- Submit Button -->
+    <!-- <div class="container">
 
-          </thead>
-        </tbody>  
-      </table>  
-    </div>  
+      <button type="button " class="btn btn-primary" id ="submit" style = "display: block; margin: 0 auto;" id ="submit">Find your perfect date!</button>  
+
+
+    </div>     -->
+  </div>  
+ 
+  <div class="container no-gutter">
+
+    <button type="button " class="btn btn-primary" id ="submit-reset" style = "display: block; margin: 0 auto;" id ="submit-reset">Reset Your Results</button>  
+
   </div>
 
+      <!-- Parallax Image-->
   <!-- Restaraunts Parallax Image -->
   <div class="parallax3 ">
     <h1 class ="imageTitle">Restaraunts</h1>  
@@ -168,6 +177,7 @@
 
   <!--Concert Parallax Image-->
   <div class="parallax4">  
+
     <h1 class ="imageTitle">Concerts</h1>
   </div>
       

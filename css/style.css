@@ -3,7 +3,12 @@
 <
    ========================================================================== */
    body{
-    background-color:whitesmoke;
+    background-color:black;
+}
+
+footer{
+    font:white;
+    text-align: center;
 }
 
 .container{
@@ -15,6 +20,7 @@
     margin-bottom: 25px;
     justify-content: center;
 }
+
 
 
 /* ========================================================================== */

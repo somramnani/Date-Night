@@ -1,17 +1,11 @@
 
 /* General Styles
-<
-   ========================================================================== */
+========================================================================== */
    body{
     background-color:black;
-}
+    }
 
-footer{
-    font:white;
-    text-align: center;
-}
-
-.container{
+	.container{
     max-width: 960px;
     margin: 0 auto;
     background: lightblue;
@@ -19,17 +13,17 @@ footer{
     padding: 25px;
     margin-bottom: 25px;
     justify-content: center;
-}
-
-
+	}
 
 /* ========================================================================== */
 
-.restaurant-parralax{
-    background-color: white;
-} 
-/* 
+
+
+/* Header Styles
 ==========================================================================  */
+.activity-header{
+	color:white;
+}
 
 /*========================================================================== */
 
@@ -42,21 +36,21 @@ footer{
 
 /* Font Styles
 ========================================================================== */ 
-.animated{
+	.animated{
     text-align: center;
     font-size: 100px;
     color: white;
-}
-#headerText{
+	}
+	#headerText{
     text-align: center;
     font-size: 25px;
     color: white;
-}
-.imageTitle{
+	}
+	.imageTitle{
     text-align: center;
     font-size: 75px;
     color: white;
-}
+	}
 /* ========================================================================== */ 
 
 
@@ -64,49 +58,58 @@ footer{
 
 /* Image Styles
 ========================================================================== */ 
-.parallaxHeader{
+	.parallaxHeader{
     background: url('../images/peter-lewicki-411606-unsplash.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     height: 500px;
-}
-.parallax2{
+	}
+
+	.parallax2{
     background: url('../images/derek-story-1488490-unsplash.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     height: 500px;
-}
-.parallax3{
+	}
+
+	.parallax3{
     background: url('../images/matthieu-huang-549064-unsplash.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     height: 500px;
-}
-.parallax4{
+	}
+
+	.parallax4{
     background: url('../images/vishnu-r-nair-639172-unsplash.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     height: 500px;
-}
+	}
 
 /* ========================================================================== */ 
 
-/* Button Styles ============================================================ */
+/* Button Styles 
+============================================================ */
 
-a.resultBtn {
+	a.resultBtn {
     background-color: green;
     border-style: solid .5px grey;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     padding: 3px;
-}
+	}
 
 /* ========================================================================== */
 
 
 /* Footer Styles
 ========================================================================== */ 
+
+	footer{
+  	font:white;
+  	text-align: center;
+	}
 
 /* ========================================================================== */ 
 

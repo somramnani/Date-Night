@@ -147,8 +147,7 @@ console.warn('Project One JS Initialized');
       	var fandangoSearchURL = "";
       //______________________________________________________
 
-
- 
+      
       //______________________________________________________
       //API'S AJAX REQUEST
       //______________________________________________________
@@ -200,7 +199,7 @@ console.warn('Project One JS Initialized');
 
               for (let i = 0; i < response.events.length; i++){
                 var name = response.events[i].name.html;
-                
+
                 if (activityEntryValue === "Local-Events" ) {
                   console.log(response.events[i]);
                   localEventsRow.append(name);

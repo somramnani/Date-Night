@@ -8,7 +8,7 @@
 	.container{
     max-width: 960px;
     margin: 0 auto;
-    background: lightblue;
+    background: lavenderblush;
     font-size: 24 px;
     padding: 25px;
     margin-bottom: 25px;
@@ -59,32 +59,39 @@
 /* Image Styles
 ========================================================================== */ 
 	.parallaxHeader{
-    background: url('../images/peter-lewicki-411606-unsplash.jpg') no-repeat center;
+    background: url('../images/valentin-antonucci-799200-unsplash.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    height: 500px;
+    height: 800px;
 	}
 
 	.parallax2{
-    background: url('../images/derek-story-1488490-unsplash.jpg') no-repeat center;
+    background: url('../images/baseball.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    height: 500px;
+    height: 600px;
 	}
 
 	.parallax3{
     background: url('../images/matthieu-huang-549064-unsplash.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    height: 500px;
+    height: 600px;
 	}
 
 	.parallax4{
-    background: url('../images/vishnu-r-nair-639172-unsplash.jpg') no-repeat center;
+    background: url('../images/concert.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    height: 500px;
-	}
+    height: 600px;
+    }
+    
+    .parallax5{
+        background: url('../images/theatre.jpg') no-repeat center;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 600px;
+        }
 
 /* ========================================================================== */ 
 

@@ -7,6 +7,7 @@
   //FIREBASE
   //________________________________________________________
 
+
     var config = {
       apiKey: "AIzaSyDfKpAiy7ngBuaxWEE57a-Fwddvw-kEEEU",
       uthDomain: "date-night-e6b75.firebaseapp.com",
@@ -21,36 +22,39 @@
   //________________________________________________________ 
 
 
-  //________________________________________________________
-  //Price Button Variables
-  //________________________________________________________
-    
-    //Price Button value variables 
-    var price1 = $(".price1").val();
-    var price2 = $(".price2").val();
-    var price3 = $(".price3").val();
-    var price4 = $(".price4").val();
-    var price5 = $(".price5").val();
-    
-    // Price button input field
-    var priceEntry = $(".price_entry");
-  //________________________________________________________
+//________________________________________________________ 
 
 
-  //________________________________________________________
-  //Activities Button Variables
-  //________________________________________________________
-    
-    //Activity Button value variables 
-    var activities1 = $(".activities1").val();
-    var activities2 = $(".activities2").val();
-    var activities3 = $(".activities3").val();
-    var activities4 = $(".activities4").val();
-    var activities5 = $(".activities5").val();
-    
-    // Activity button input field
-		var activityEntry = $(".activities_entry");
-  //________________________________________________________
+//________________________________________________________
+//Price Button Variables
+//________________________________________________________
+  
+  //Price Button value variables 
+  var price1 = $(".price1").val();
+  var price2 = $(".price2").val();
+  var price3 = $(".price3").val();
+  var price4 = $(".price4").val();
+  var price5 = $(".price5").val();
+  
+  // Price button input field
+  var priceEntry = $(".price_entry");
+//________________________________________________________
+
+
+//________________________________________________________
+//Activities Button Variables
+//________________________________________________________
+  
+  //Activity Button value variables 
+  var activities1 = $(".activities1").val();
+  var activities2 = $(".activities2").val();
+  var activities3 = $(".activities3").val();
+  var activities4 = $(".activities4").val();
+  var activities5 = $(".activities5").val();
+  
+  // Activity button input field
+  var activityEntry = $(".activities_entry");
+//________________________________________________________
 
 //__________________________________________________________
 
@@ -58,73 +62,59 @@
 //__________________________________________________________
 //BUTTON FUNCTIONS
 //__________________________________________________________
+
+//________________________________________________________
+//Price Button On-Click Functions
+//________________________________________________________
   
-  //________________________________________________________
-  //Price Button On-Click Functions
-  //________________________________________________________
-    
-    //If one of the $ is selected, then make the input value(priceEntry) value that price
+  //If one of the $ is selected, then make the input value(priceEntry) value that price
 
-    $(".price1").on("click", function(){
-      priceEntry.attr("value", price1);
-    })
+  $(".price1").on("click", function(){
+    priceEntry.attr("value", price1);
+  })
 
-    $(".price2").on("click", function(){
-      priceEntry.attr("value", price2);
-    })
-    
-    $(".price3").on("click", function(){
-      priceEntry.attr("value", price3);
-    })
-    
-    $(".price4").on("click", function(){
-      priceEntry.attr("value", price4);
-    })
-    
-    $(".price5").on("click", function(){
-      priceEntry.attr("value", price5 );
-    })
-  //________________________________________________________
+  $(".price2").on("click", function(){
+    priceEntry.attr("value", price2);
+  })
+  
+  $(".price3").on("click", function(){
+    priceEntry.attr("value", price3);
+  })
+  
+  $(".price4").on("click", function(){
+    priceEntry.attr("value", price4);
+  })
+  
+  $(".price5").on("click", function(){
+    priceEntry.attr("value", price5 );
+  })
+//________________________________________________________
 
-   
-  //________________________________________________________
-  //Activity On-Click Functions
-  //________________________________________________________
-    
-    //If one of the activities is selected, then make the input value(priceEntry) value that price  
+ 
+//________________________________________________________
+//Activity On-Click Functions
+//________________________________________________________
+  
+  //If one of the activities is selected, then make the input value(priceEntry) value that price  
 
-    $(".activities1").on("click", function(){
-      activityEntry.attr("value", activities1);
-    })
-
-    $(".activities2").on("click", function(){
-      activityEntry.attr("value", activities2);
-    })
-
-    $(".activities3").on("click", function(){
-      activityEntry.attr("value", activities3);
-    })
-
-    $(".activities4").on("click", function(){
-      activityEntry.attr("value", activities4);
-    })
-
-    $(".activities5").on("click", function(){
-      activityEntry.attr("value", activities5);
-		})
-    
-  //______________________________________________________
+  $(".activities1").on("click", function(){
+    activityEntry.attr("value", activities1);
+  })
 
 
   //______________________________________________________
   //Price Button On-Click Functions
   //______________________________________________________
 
-    $("#submit").on("click", function() {
 
-      // The input value of activities
-		  var priceEntryValue = $(".price_entry").val();
-      console.log(priceEntryValue);
+  $(".activities3").on("click", function(){
+    activityEntry.attr("value", activities3);
+  })
+
+  $(".activities4").on("click", function(){
+    activityEntry.attr("value", activities4);
+  })
+
 
       // This is the input value of activities: 
       var activityEntryValue = $(".activities_entry").val();
@@ -151,15 +141,13 @@
       //______________________________________________________
 
         // YELP API
-        $.ajax({
-          url: yelpURL,
-          headers: {
-            'Authorization': 'Bearer ' + yelpAPIKey,    
-          },    
-          method: "GET",
-            dataType: 'json' 
 
+        $.ajax({
+          url: eventbriteURL,
+          method: "GET"
+          
           }).then(function(response) {
+
               console.warn("<--------yelp results----->");
               console.log(response);
 
@@ -195,8 +183,13 @@
 
               console.warn("<------eventbrite results------->");
               console.log(response);
+            
 
-              var localEventsRow = $("#localevents-results");
+          for(i = 0; i < response.results.length; i++) {
+            console.log('theater name: ' + response.results[i].name);
+            console.log('street address: ' + response.results[i].formatted_address);
+            console.log('user rating: ' + response.results[i].rating);
+
 
               for (let i = 0; i < response.events.length; i++){
                 var name = response.events[i].name.html;
@@ -234,8 +227,3 @@
       
 //______________________________________________________
         
-
-
-
-
- 

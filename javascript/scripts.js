@@ -1,7 +1,4 @@
 
-/* eslint-disable */
-console.warn('Project One JS Initialized');
-
 //__________________________________________________________
 //GLOBAL VARIABLES
 //__________________________________________________________
@@ -10,13 +7,13 @@ console.warn('Project One JS Initialized');
   //FIREBASE
   //________________________________________________________
 
-   var config = {
-    apiKey: "AIzaSyDfKpAiy7ngBuaxWEE57a-Fwddvw-kEEEU",
-    uthDomain: "date-night-e6b75.firebaseapp.com",
-    databaseURL: "https://date-night-e6b75.firebaseio.com",
-    projectId: "date-night-e6b75",
-    storageBucket: "date-night-e6b75.appspot.com",
-    messagingSenderId: "637265402446"
+    var config = {
+      apiKey: "AIzaSyDfKpAiy7ngBuaxWEE57a-Fwddvw-kEEEU",
+      uthDomain: "date-night-e6b75.firebaseapp.com",
+      databaseURL: "https://date-night-e6b75.firebaseio.com",
+      projectId: "date-night-e6b75",
+      storageBucket: "date-night-e6b75.appspot.com",
+      messagingSenderId: "637265402446"
     };
     
     firebase.initializeApp(config);
@@ -228,6 +225,8 @@ console.warn('Project One JS Initialized');
             }
           })
         })
+
+  
     //______________________________________________________
       
   //______________________________________________________

@@ -2,7 +2,8 @@
 /* General Styles
 ========================================================================== */
    body{
-    background-color:black;
+		background-color:black;
+		font-family: 'Cinzel', serif;
     }
 
 	.container{
@@ -21,20 +22,14 @@
 
 /* Header Styles
 ==========================================================================  */
-.activity-header{
+	.activity-header , .header{
     color:white;
-    font-family: 'Cinzel', serif;
-    font-weight:bold;
-    
-}
+
+    font-weight:bold; 
+	}
 
 /*========================================================================== */
 
-
-
-
-   
-/* ========================================================================== */ 
 
 
 /* Font Styles
@@ -42,7 +37,8 @@
 	.animated{
     text-align: center;
     font-size: 100px;
-    color: white;
+		color: white;
+		padding-top: 2em;
 	}
 	#headerText{
     text-align: center;

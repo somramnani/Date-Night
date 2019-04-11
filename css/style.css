@@ -3,23 +3,27 @@
 ========================================================================== */
 
    body{
-		background-color:black;
+
+    background-color:black;
+
+		
 		font-family: 'Cinzel', serif;
+
     }
 
 	.container{
     max-width: 960px;
     margin: 0 auto;
-    background: lavenderblush;
+    background:lavender;
     font-size: 24 px;
     padding: 25px;
     margin-bottom: 25px;
     justify-content: center;
+    border-radius: 25px;
 	}
 
-    #budgetform {
-        visibility: hidden;
-    }
+
+
 /* ========================================================================== */
 
 
@@ -31,6 +35,9 @@
 
     font-weight:bold; 
 	}
+	.restaurant-parralax{
+		padding-top: 5em;
+	} 
 
 /*========================================================================== */
 

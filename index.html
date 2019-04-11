@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- *********************************************************************************** -->
 
+    <!-- **************Google Fonts Links************** -->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <!-- *********************************************************************************** -->
+
     <!-- Animate CSS Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <!-- style.css link -->
@@ -24,7 +28,7 @@
   <body>
     
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">DATE NIGHT NIRVANA</a>
       
       <!-- Hamburger Button -->
@@ -41,19 +45,25 @@
               <a class="dropdown-item" href="#"><p>Enter your desired location, the radius is 15 miles</p>
                 <p>Enter your desired budget.</p> 
                 <p>Click what activities you want to do. Enjoy perusing your options!</p>
-              <p>if you choose "Restaurants", please choose a budget. if you choose "Theatres", "Sport Events", "Concerts" or "Local Events", make sure you choose the date!</p></a>
+              <p>If you choose "Restaurants", please choose a budget.</p>
+              <p> If you choose "Theatres", "Sport Events", "Concerts" or "Local Events", make sure you choose the date!</p>
+            
+            </a>
             </div>
           </li>
         </ul>
       </div>
     </nav>
- <!-- Parallax Header-->
+
+    <!-- Parallax Header-->
+  <section>
+    <!-- First Image Header -->
     <div class="parallaxHeader">
       <h1 class="animated infinite pulse delay-5s">Date Night Nirvana</h1>
       <p id="headerText">The Ultimate Date Finder App</p>
     </div>
-
     <br>
+  </section>
 
     <!-- Location, Budget, Activites will be stored  -->
     <div class="container no-gutters">
@@ -64,7 +74,7 @@
           <input type="location" class="form-control gps" id="location" placeholder="Zip Code OR City and State">
         </div>
 
-        <form>
+      <form>
           <div class="form-group">
             <label for="exampleFormControlInput1">Date</label>
             <input type="location" class="form-control gps" id="location" placeholder="When will your adventure begin?">
@@ -75,8 +85,7 @@
           <label for="exampleFormControlSelect1">What is your budget?</label>
           <div class="input-group mb-3">
             
-            <div class="input-group-prepend">
-            </div>
+            <div class="input-group-prepend"></div>
 
               <button type="button" class="btn btn-outline-info price1 button1" value ="$">$</button>
               <button type="button" class="btn btn-outline-warning price2 button2" value ="$$">$$</button>
@@ -93,98 +102,82 @@
           
           <!-- Activities Form -->
           <div class="form-group">
-            <label for="exampleFormControlSelect2">Activities!</label>            
-            <br>
+						<label for="exampleFormControlSelect2">Activities!</label>   
+						         
+						<br>
+						
             <div class="input-group mb-3">
            
-            <button type="button" class="btn btn-outline-info activities1" value = "Restaurants">Restaurants</button>
-            <button type="button" class="btn btn-outline-warning activities2" value = "Theatres">Theatres</button>
-            <button type="button" class="btn btn-outline-primary activities3" value = "Sport-Events">Sport Events</button>
-            <button type="button" class="btn btn-outline-success activities4" value = "Concerts" >Concerts</button>
-            <button type="button" class="btn btn-outline-danger activities5" value = "Local-Events">Local Events</button>  
-          </div>
+							<button type="button" class="btn btn-outline-info activities1" value = "Restaurants">Restaurants</button>
+							<button type="button" class="btn btn-outline-warning activities2" value = "Theatres">Theatres</button>
+							<button type="button" class="btn btn-outline-danger activities5" value = "Local-Events">Local Events</button>  
+						
+          	</div>
   
           <!-- Activites Input -->
-          <input type="text" class="form-control activities_entry" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">    
+          	<input type="text" class="form-control activities_entry" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">    
         </div>  
-      </form>  
+			</form>
+		</form>
+			  
 
     <div class="container no-gutter">
       <button type="button " class="btn btn-primary" id ="submit" style = "display: block; margin: 0 auto;" id ="submit">Find your perfect date!</button>  
     </div>    
  
 
-    </div>
 
-    <br>
-
-    <!-- Submit Button -->
-    <!-- <div class="container">
-
-      <button type="button " class="btn btn-primary" id ="submit" style = "display: block; margin: 0 auto;" id ="submit">Find your perfect date!</button>  
-
-
-    </div>     -->
   </div>  
- 
+  <br>
 
 
-      <!-- Parallax Image-->
-  <!-- Restaraunts Parallax Image -->
-  <div class="parallax3 ">
-    <h1 class ="imageTitle"></h1>  
-  </div>    
-  
-    <div class= "restaurant-parralax text-center"> 
+ <!-- Restaraunts-->
+  <section>
+    <!-- Restaraunt Header -->
+    <div class= "restaurant-parralax text-center "> 
+      <h1 class = "activity-header">Restaurants</h1>            
     </div>
+
+     <!-- Restaraunts Parallax Image -->
+    <div class="parallax3 img-responsive"></div>    
     <br>
-      <!-- Columns for the Results -->
-  <div class="container no-gutter">
-    <table class="table">
-      <thead>
-       
-          <th scope="col">Restaurants</th>
-            <th scope="col">Theatres</th>
-            <th scope="col">Sport Events</th>
-            <th scope="col">Concerts</th>
-         
-         
-          <th scope="col"></th>  
-          <tr id = "localevents-results"></tr>
-          
-        <!-- Restaurant Results -->  
-        <tr id = "restaurant-results"></tr>
-        <tr id = "theatres-results"></tr>
-        <tr id = "sportingevents-results"></tr>
-        <tr id = "concerts-results"></tr>
-      
-        
-        </thead>
-      </tbody>  
-    </table>  
-  </div>
+  </section>
 
-  <!-- Events Parallax Image-->
-  <div class="parallax2">
-    <h1 class = "imageTitle"></h1>
-  </div>
+  <!-- Theatre-->
+  <section>
+    <!-- Theatre Header -->
+    <div class= "theatre-parralax text-center"> 
+      <h1 class = "activity-header">Theatres</h1>            
+    </div>
+
+     <!-- Theatre Parallax Image -->
+    <div class="parallax5 img-responsive "></div>    
+    <br>
+  </section>
+
+ <!-- Local-Events -->
+  <section>
+    
+    <!-- Local Events Header -->
+    <div class= "sport-parralax text-center"> 
+      <h1 class = "activity-header">Local Events</h1>               
+    </div>
+    <!-- Local-Events Parallax Image-->
+    <div class="parallax2 img-responsive"></div>
+    <br>
+  </section>
+
 
   <br>
-  <div class="container no-gutter">
+  
 
-    <button type="button " class="btn btn-primary" id ="submit-reset" style = "display: block; margin: 0 auto;" id ="submit-reset">Reset Your Results</button>  
+  <!-- Footer -->
+  <footer>
+    <h4>&reg; MONEY TEAM - Som Ramnani - Tony Kruso - Brent Abruzese - Darren Steverson - 2019</h4>
+  </footer>
 
-  </div>
-  <br>
 
-  <!-- Parallax Image-->
-  <div class="parallax4">  
 
-    <h1 class ="imageTitle"></h1>
-  </div>
-      <footer>
-        <h4>&reg; MONEY TEAM - Som Ramnani - Tony Kruso - Brent Abruzese - Darren Stevenson - 2019</h4>
-      </footer>
   <!-- AJAX library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -194,6 +187,7 @@
   
   <!-- Latest compiled JavaScript -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
   <script src="javascript/scripts.js"></script>
 
   </body>

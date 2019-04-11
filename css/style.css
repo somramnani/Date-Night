@@ -17,6 +17,9 @@
     justify-content: center;
 	}
 
+    #budgetform {
+        visibility: hidden;
+    }
 /* ========================================================================== */
 
 

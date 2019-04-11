@@ -42,11 +42,11 @@
               Instructions
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#"><p>Enter your desired location, the radius is 15 miles</p>
-                <p>Enter your desired budget.</p> 
-                <p>Click what activities you want to do. Enjoy perusing your options!</p>
+              <a class="dropdown-item" href="#"><p>Enter your desired location, the search radius is 15 miles.</p> 
+                <p>Click what activity you want to do.</p>
               <p>If you choose "Restaurants", please choose a budget.</p>
-              <p> If you choose "Theatres", "Sport Events", "Concerts" or "Local Events", make sure you choose the date!</p>
+              <p>You can click on your results to reach their webpage to learn more about them.</p>
+              <p>Scroll down below to see your results and enjoy perusing your options!</p>
             
             </a>
             </div>
@@ -74,11 +74,29 @@
           <input type="location" class="form-control gps" id="location" placeholder="Zip Code OR City and State">
         </div>
 
-      <form>
+          <!-- Activities Form -->
+          <div class="form-group">
+						<label for="exampleFormControlSelect2">Activities!</label>   
+						         
+						<br>
+						
+            <div class="input-group mb-3">
+           
+							<button type="button" class="btn btn-outline-info activities1" value = "Restaurants">Restaurants</button>
+							<button type="button" class="btn btn-outline-warning activities2" value = "Theatres">Theatres</button>
+							<button type="button" class="btn btn-outline-danger activities5" value = "Local-Events">Local Events</button>  
+						
+          	</div>
+  
+          <!-- Activites Input -->
+          	<input type="text" class="form-control activities_entry" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">    
+        </div>  
+
+      <!-- <form>
           <div class="form-group">
             <label for="exampleFormControlInput1">Date</label>
             <input type="location" class="form-control gps" id="location" placeholder="When will your adventure begin?">
-          </div>
+          </div> -->
 
         <!-- Budget Form -->
         <div class="form-group">
@@ -100,24 +118,7 @@
         </div>
 
           
-          <!-- Activities Form -->
-          <div class="form-group">
-						<label for="exampleFormControlSelect2">Activities!</label>   
-						         
-						<br>
-						
-            <div class="input-group mb-3">
-           
-							<button type="button" class="btn btn-outline-info activities1" value = "Restaurants">Restaurants</button>
-							<button type="button" class="btn btn-outline-warning activities2" value = "Theatres">Theatres</button>
-							<button type="button" class="btn btn-outline-danger activities5" value = "Local-Events">Local Events</button>  
-						
-          	</div>
-  
-          <!-- Activites Input -->
-          	<input type="text" class="form-control activities_entry" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">    
-        </div>  
-			</form>
+			<!-- </form> -->
 		</form>
 			  
 

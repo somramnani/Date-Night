@@ -7,6 +7,23 @@ console.warn('Project One JS Initialized');
 //__________________________________________________________
 
   //________________________________________________________
+  //FIREBASE
+  //________________________________________________________
+
+   var config = {
+    apiKey: "AIzaSyDfKpAiy7ngBuaxWEE57a-Fwddvw-kEEEU",
+    uthDomain: "date-night-e6b75.firebaseapp.com",
+    databaseURL: "https://date-night-e6b75.firebaseio.com",
+    projectId: "date-night-e6b75",
+    storageBucket: "date-night-e6b75.appspot.com",
+    messagingSenderId: "637265402446"
+    };
+    
+    firebase.initializeApp(config);
+
+  //________________________________________________________
+
+  //________________________________________________________
   //Price Button Variables
   //________________________________________________________
     

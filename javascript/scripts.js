@@ -7,9 +7,6 @@ console.warn('Project One JS Initialized');
 //__________________________________________________________
 
   //________________________________________________________
-
-
-  //________________________________________________________
   //Price Button Variables
   //________________________________________________________
     
@@ -104,7 +101,6 @@ console.warn('Project One JS Initialized');
   //______________________________________________________
 
 
-
   //______________________________________________________
   //Price Button On-Click Functions
   //______________________________________________________
@@ -138,50 +134,49 @@ console.warn('Project One JS Initialized');
       //______________________________________________________
       //API'S AJAX REQUEST
       //______________________________________________________
-      
-      $.ajax({
-        url: yelpURL,
-        headers: {
-          'Authorization': 'Bearer ' + yelpAPIKey,    
-        },    
-        method: "GET",
-          dataType: 'json' 
 
-        }).then(function(response) {
-           // var resultArray = [];
-            console.warn("<--------yelp results----->");
-            console.log(response);
+        // YELP API
+        $.ajax({
+          url: yelpURL,
+          headers: {
+            'Authorization': 'Bearer ' + yelpAPIKey,    
+          },    
+          method: "GET",
+            dataType: 'json' 
 
-            for(i = 0; i < response.businesses.length; i++){   
-              // Restauraunt Results Row
-              var newRow = $("<tr>");
-              var restaurauntDiv  = $(".restaurant-parralax");
-              
-
-              // resultArray.push([i]);
-
-              // API information stored into variables
-              var price = response.businesses[i].price;
-              var image = response.businesses[i].image_url;
-              var webURL = response.businesses[i].url;
-              var location = response.businesses[i].location;
-              var name = response.businesses[i].name;
-              var lat = response.businesses[i].coordinates.latitude;
-              var long = response.businesses[i].coordinates.longitude;
-
-              // If the user clicks price, and restaraunts display the specific budget and Restaurants.
-              if (priceEntryValue === price  && activityEntryValue === "Restaurants" ) {
-                console.log(response.businesses[i]);
-                let restBtn = $("<a>").addClass("resultBtn m-2").html(name).attr("href", webURL).attr("data-toggle", "popover").attr("title", "information").attr("data-content", "information  here").attr("target", "_blank");
-                restaurauntDiv.append(restBtn);
-              }
-          }                  
-        })
-      
-     $.ajax({
-          url: eventbriteURL,
-          method: "GET"
           }).then(function(response) {
+              console.warn("<--------yelp results----->");
+              console.log(response);
+
+              for(i = 0; i < response.businesses.length; i++){   
+                // Restauraunt Results Row
+                var newRow = $("<tr>");
+                var restaurauntDiv  = $(".restaurant-parralax");
+             
+                // API information stored into variables
+                var price = response.businesses[i].price;
+                var image = response.businesses[i].image_url;
+                var webURL = response.businesses[i].url;
+                var location = response.businesses[i].location;
+                var name = response.businesses[i].name;
+                var lat = response.businesses[i].coordinates.latitude;
+                var long = response.businesses[i].coordinates.longitude;
+
+                // If the user clicks price, and restaraunts display the specific budget and Restaurants.
+                if (priceEntryValue === price  && activityEntryValue === "Restaurants" ) {
+                  console.log(response.businesses[i]);
+                  let restBtn = $("<a>").addClass("resultBtn m-2").html(name).attr("href", webURL).attr("data-toggle", "popover").attr("title", "information").attr("data-content", "information  here").attr("target", "_blank");
+                  restaurauntDiv.append(restBtn);
+                }
+              }                  
+          })
+
+          // Eventbrite API
+          $.ajax({
+            url: eventbriteURL,
+            method: "GET"
+            
+            }).then(function(response) {
 
               console.warn("<------eventbrite results------->");
               console.log(response);
@@ -197,32 +192,31 @@ console.warn('Project One JS Initialized');
                 }
               }
           })
+          
+          // Google Places API
+          $.ajax({
+            url: placesURL,
+            method: "GET"
+          }).then(function(response) {
+            console.warn('----google places-----')
 
-        $.ajax({
-          url: placesURL,
-          method: "GET"
-        }).then(function(response) {
-          console.warn('----google places-----')
+            for(i = 0; i < response.results.length; i++) {
+              console.log('theater name: ' + response.results[i].name);
+              console.log('street address: ' + response.results[i].formatted_address);
+              console.log('user rating: ' + response.results[i].rating);
 
-          for(i = 0; i < response.results.length; i++) {
-            console.log('theater name: ' + response.results[i].name);
-            console.log('street address: ' + response.results[i].formatted_address);
-            console.log('user rating: ' + response.results[i].rating);
-
-            var theaterName = response.results[i].name;
-            var theaterAddress = response.results[i].formatted_address;
-            var theaterRating = response.results[i].rating;
-          }
+              var theaterName = response.results[i].name;
+              var theaterAddress = response.results[i].formatted_address;
+              var theaterRating = response.results[i].rating;
+            }
+          })
         })
-
-          // console.log(resultArray);
-      })
     //______________________________________________________
       
   //______________________________________________________
       
 //______________________________________________________
-      
+        
 
 
 

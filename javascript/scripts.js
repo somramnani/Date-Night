@@ -7,16 +7,20 @@
   //FIREBASE
   //________________________________________________________
 
-  var config = {
-    apiKey: "AIzaSyDfKpAiy7ngBuaxWEE57a-Fwddvw-kEEEU",
-    uthDomain: "date-night-e6b75.firebaseapp.com",
-    databaseURL: "https://date-night-e6b75.firebaseio.com",
-    projectId: "date-night-e6b75",
-    storageBucket: "date-night-e6b75.appspot.com",
-    messagingSenderId: "637265402446"
-  };
-  
-  firebase.initializeApp(config);
+
+    var config = {
+      apiKey: "AIzaSyDfKpAiy7ngBuaxWEE57a-Fwddvw-kEEEU",
+      uthDomain: "date-night-e6b75.firebaseapp.com",
+      databaseURL: "https://date-night-e6b75.firebaseio.com",
+      projectId: "date-night-e6b75",
+      storageBucket: "date-night-e6b75.appspot.com",
+      messagingSenderId: "637265402446"
+    };
+    
+    firebase.initializeApp(config);
+
+  //________________________________________________________ 
+
 
 //________________________________________________________ 
 
@@ -97,9 +101,11 @@
     activityEntry.attr("value", activities1);
   })
 
-  $(".activities2").on("click", function(){
-    activityEntry.attr("value", activities2);
-  })
+
+  //______________________________________________________
+  //Price Button On-Click Functions
+  //______________________________________________________
+
 
   $(".activities3").on("click", function(){
     activityEntry.attr("value", activities3);
@@ -109,132 +115,115 @@
     activityEntry.attr("value", activities4);
   })
 
-  $(".activities5").on("click", function(){
-    activityEntry.attr("value", activities5);
-  })
-  
-//______________________________________________________
 
-
-//______________________________________________________
-//Price Button On-Click Functions
-//______________________________________________________
-
-  $("#submit").on("click", function() {
-
-    // The input value of activities
-    var priceEntryValue = $(".price_entry").val();
-    console.log(priceEntryValue);
-
-    // This is the input value of activities: 
-    var activityEntryValue = $(".activities_entry").val();
-    console.log(activityEntryValue);
-    
-    //______________________________________________________
-    //API VARIABLES
-    //______________________________________________________
-      var addressInput = $("#location").val().trim();
-      var yelpAPIKey = "V3BqWR13gf4DYXvRewAG0jVi7K7Xy-yLxjzRTFA29eZPdSiS1aFqyxVXq1PNP2e_m4Xl8cDdypAroctE4HFsP0ZY7_oGX0Xmvm7kZ6_WtTMAqCx2k_qljY0j3qymXHYx"
-      var yelpURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + addressInput + "&limit=6";
-
-      var eventbriteAPIKey = "QHHRQKYP5TZBK3NVPHD2";
-      var eventbriteURL = "https://www.eventbriteapi.com/v3/events/search/?location.address=" + addressInput + "&token=QHHRQKYP5TZBK3NVPHD2";
-      var OAuthKey = "QHHRQKYP5TZBK3NVPHD2";
-      var eventSearchURL = "https://cors-anywhere.herokuapp.com/https://www.eventbriteapi.com/v3/events/search?location.address=" + addressInput;
+      // This is the input value of activities: 
+      var activityEntryValue = $(".activities_entry").val();
+      console.log(activityEntryValue);
       
-      let placesAPIKey = "AIzaSyBXO-BuPfu7ZFeL1Cebncm3ojSMaIbNFk0";
-      let placesURL = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=theaters+in+" + addressInput + "&key=" + placesAPIKey;
-    //______________________________________________________
-    
-    //______________________________________________________
-    //API'S AJAX REQUEST
-    //______________________________________________________
+      //______________________________________________________
+      //API VARIABLES
+      //______________________________________________________
+        var addressInput = $("#location").val().trim();
+        var yelpAPIKey = "V3BqWR13gf4DYXvRewAG0jVi7K7Xy-yLxjzRTFA29eZPdSiS1aFqyxVXq1PNP2e_m4Xl8cDdypAroctE4HFsP0ZY7_oGX0Xmvm7kZ6_WtTMAqCx2k_qljY0j3qymXHYx"
+        var yelpURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + addressInput + "&limit=6";
 
-      // YELP API
-      $.ajax({
-        url: yelpURL,
-        headers: {
-          'Authorization': 'Bearer ' + yelpAPIKey,    
-        },    
-        method: "GET",
-          dataType: 'json' 
+        var eventbriteAPIKey = "QHHRQKYP5TZBK3NVPHD2";
+        var eventbriteURL = "https://www.eventbriteapi.com/v3/events/search/?location.address=" + addressInput + "&token=QHHRQKYP5TZBK3NVPHD2";
+        var OAuthKey = "QHHRQKYP5TZBK3NVPHD2";
+        var eventSearchURL = "https://cors-anywhere.herokuapp.com/https://www.eventbriteapi.com/v3/events/search?location.address=" + addressInput;
+        
+        let placesAPIKey = "AIzaSyBXO-BuPfu7ZFeL1Cebncm3ojSMaIbNFk0";
+        let placesURL = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=theaters+in+" + addressInput + "&key=" + placesAPIKey;
+      //______________________________________________________
+      
+      //______________________________________________________
+      //API'S AJAX REQUEST
+      //______________________________________________________
 
-        }).then(function(response) {
-            console.warn("<--------yelp results----->");
-            console.log(response);
+        // YELP API
 
-            for(i = 0; i < response.businesses.length; i++){   
-              // Restauraunt Results Row
-              var newRow = $("<tr>");
-              var restaurauntDiv  = $(".restaurant-parralax");
-           
-              // API information stored into variables
-              var price = response.businesses[i].price;
-              var image = response.businesses[i].image_url;
-              var webURL = response.businesses[i].url;
-              var location = response.businesses[i].location;
-              var name = response.businesses[i].name;
-              var lat = response.businesses[i].coordinates.latitude;
-              var long = response.businesses[i].coordinates.longitude;
-
-              // If the user clicks price, and restaraunts display the specific budget and Restaurants.
-              if (priceEntryValue === price  && activityEntryValue === "Restaurants" ) {
-                console.log(response.businesses[i]);
-                let restBtn = $("<a>").addClass("resultBtn m-2").html(name).attr("href", webURL).attr("data-toggle", "popover").attr("title", "information").attr("data-content", "information  here").attr("target", "_blank");
-                restaurauntDiv.append(restBtn);
-              }
-            }                  
-        })
-
-        // Eventbrite API
         $.ajax({
           url: eventbriteURL,
           method: "GET"
           
           }).then(function(response) {
 
-            console.warn("<------eventbrite results------->");
-            console.log(response);
+              console.warn("<--------yelp results----->");
+              console.log(response);
 
-            var localEventsRow = $("#localevents-results");
+              for(i = 0; i < response.businesses.length; i++){   
+                // Restauraunt Results Row
+                var newRow = $("<tr>");
+                var restaurauntDiv  = $(".restaurant-parralax");
+             
+                // API information stored into variables
+                var price = response.businesses[i].price;
+                var image = response.businesses[i].image_url;
+                var webURL = response.businesses[i].url;
+                var location = response.businesses[i].location;
+                var name = response.businesses[i].name;
+                var lat = response.businesses[i].coordinates.latitude;
+                var long = response.businesses[i].coordinates.longitude;
 
-            for (let i = 0; i < response.events.length; i++){
-              var name = response.events[i].name.html;
+                // If the user clicks price, and restaraunts display the specific budget and Restaurants.
+                if (priceEntryValue === price  && activityEntryValue === "Restaurants" ) {
+                  console.log(response.businesses[i]);
+                  let restBtn = $("<a>").addClass("resultBtn m-2").html(name).attr("href", webURL).attr("data-toggle", "popover").attr("title", "information").attr("data-content", "information  here").attr("target", "_blank");
+                  restaurauntDiv.append(restBtn);
+                }
+              }                  
+          })
 
-              if (activityEntryValue === "Local-Events" ) {
-                console.log(response.events[i]);
-                localEventsRow.append(name);
-              }
-            }
-        })
-        
-        // Google Places API
-        $.ajax({
-          url: placesURL,
-          method: "GET"
-        }).then(function(response) {
-          console.warn('----google places-----')
+          // Eventbrite API
+          $.ajax({
+            url: eventbriteURL,
+            method: "GET"
+            
+            }).then(function(response) {
+
+              console.warn("<------eventbrite results------->");
+              console.log(response);
+            
 
           for(i = 0; i < response.results.length; i++) {
             console.log('theater name: ' + response.results[i].name);
             console.log('street address: ' + response.results[i].formatted_address);
             console.log('user rating: ' + response.results[i].rating);
 
-            var theaterName = response.results[i].name;
-            var theaterAddress = response.results[i].formatted_address;
-            var theaterRating = response.results[i].rating;
-          }
+
+              for (let i = 0; i < response.events.length; i++){
+                var name = response.events[i].name.html;
+
+                if (activityEntryValue === "Local-Events" ) {
+                  console.log(response.events[i]);
+                  localEventsRow.append(name);
+                }
+              }
+          })
+          
+          // Google Places API
+          $.ajax({
+            url: placesURL,
+            method: "GET"
+          }).then(function(response) {
+            console.warn('----google places-----')
+
+            for(i = 0; i < response.results.length; i++) {
+              console.log('theater name: ' + response.results[i].name);
+              console.log('street address: ' + response.results[i].formatted_address);
+              console.log('user rating: ' + response.results[i].rating);
+
+              var theaterName = response.results[i].name;
+              var theaterAddress = response.results[i].formatted_address;
+              var theaterRating = response.results[i].rating;
+            }
+          })
         })
-      })
 
-
-  //______________________________________________________
-    
-//______________________________________________________
-    
-//______________________________________________________
+  
+    //______________________________________________________
       
-
-
-
-
+  //______________________________________________________
+      
+//______________________________________________________
+        

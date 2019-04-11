@@ -18,8 +18,6 @@ A web app that finds your location and shows what events are happening that day.
 - JQuery
 - Firebase
 
-
-
 ## Features
 
 - Shows result based on your: 
@@ -27,9 +25,7 @@ A web app that finds your location and shows what events are happening that day.
   - Radius
   - Interests
   - Budget
-  
 - Shows the pricing of each event
-
 - Features that will be displayed
   - Price
   - Rating

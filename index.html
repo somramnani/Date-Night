@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Date Night</title>
+    <meta name="description" content="Project 1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="images/calender-favicon.png">
+
+    <!-- **************Bootstrap Links************** -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- *********************************************************************************** -->
+
+    <!-- **************Google Fonts Links************** -->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <!-- *********************************************************************************** -->
+    
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Animate CSS Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!-- style.css link -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  
+
+  <body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html">DATE NIGHT NIRVANA</a>
+      
+      <!-- Hamburger Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Instructions
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#"><p>Enter your desired location, the search radius is 15 miles.</p> 
+                <p>Click what activity you want to do.</p>
+              <p>If you choose "Restaurants", please choose a budget.</p>
+
+              <p>You can click on your results to reach their webpage to learn more about them.</p>
+              <p>Scroll down below to see your results and enjoy perusing your options!</p>
+
+            
+            </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Parallax Header-->
+  <section id = "header">
+    <div class="parallaxHeader">
+      <h1 class="animated infinite pulse delay-5s header">Date Night Nirvana</h1>
+      <p id="headerText">The Ultimate Date Finder App</p>
+      <br>
+      <div class="main" id="section1">
+      <!-- <button type="button" class="btn btn-light" id ="submit" style = "display: block; margin: 0 auto;" href="#section2">Get Started</button> -->
+      <a href="#section2" button type="button" class="btn btn-light" style = "display: block; margin: 0 auto; width: 10%">Get Started!</a>
+      </div>
+  
+    </div>
+    <br>
+    <div class="main" id="section2"></div>
+    <br>
+  </section>
+
+  <br><br>
+    <!-- Location, Budget, Activites will be stored  -->
+
+    <div class="container no-gutters">
+
+
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Location</label>
+          <input type="location" class="form-control gps" id="location" placeholder="Zip Code OR City and State">
+        </div>
+
+
+          <!-- Activities Form -->
+          <div class="form-group">
+						<label for="exampleFormControlSelect2">Activities!</label>   
+						         
+						<br>
+						
+            <div class="input-group mb-3">
+							<button type="button" class="btn btn-light restaurant_input" value = "Restaurants">Restaurants</button>
+               &nbsp;
+							<button type="button" class="btn btn-light theatres_input " value = "Theatres">Theatres</button>
+               &nbsp;
+							<button type="button" class="btn btn-light localevents_input" value = "Local Events">Local Events</button>  
+          	</div>
+  
+          <!-- Activites Input -->
+          	<input type="text" class="form-control activities_entry" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">    
+        </div>  
+
+        <!-- Budget Form -->
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">What is your budget?</label>
+          <div class="input-group mb-3">
+            
+            <div class="input-group-prepend"></div>
+
+              <button type="button" class="btn btn-light price1 button1" value ="$">$</button>
+              &nbsp;
+              <button type="button" class="btn btn-light price2 button2" value ="$$">$$</button>
+              &nbsp;
+              <button type="button" class="btn btn-light price3 button3" value ="$$$">$$$</button>
+              &nbsp;
+              <button type="button" class="btn btn-light price4 button4" value ="$$$$">$$$$</button>
+              &nbsp;
+              <button type="button" class="btn btn-light price5 button5" value ="$$$$$">$$$$$</button>
+          
+          </div>
+          </div>
+            <!-- Price Input -->
+            <input type="text" class="form-control price_entry" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        
+
+          
+			<!-- </form> -->
+    </form>	
+  	  
+
+    <div class="container no-gutter">
+      <button type="button " class="btn btn-light" id ="submit" style = "display: block; margin: 0 auto;" id ="submit">Find your perfect date!</button>  
+    </div>    
+ 
+
+
+  </div>  
+  <br>
+
+
+ <!-- Restaraunts-->
+  <section>
+    <!-- Restaraunt Header -->
+    <div class= "restaurant-parralax text-center "> 
+      <h1 class = "activity-header">Restaurants</h1>            
+    </div>
+
+     <!-- Restaraunts Parallax Image -->
+    <div class="parallax3 img-responsive"></div>    
+    <br>
+  </section>
+
+  <!-- Theatre-->
+  <section>
+    <!-- Theatre Header -->
+    <div class= "theatre-parralax text-center"> 
+      <h1 class = "activity-header">Theatres</h1>            
+    </div>
+
+     <!-- Theatre Parallax Image -->
+    <div class="parallax5 img-responsive "></div>    
+    <br>
+  </section>
+
+ <!-- Local-Events -->
+  <section>
+    
+    <!-- Local Events Header -->
+    <div class= "sport-parralax text-center"> 
+      <h1 class = "activity-header">Local Events</h1>               
+    </div>
+    <!-- Local-Events Parallax Image-->
+    <div class="parallax2 img-responsive"></div>
+    <br>
+  </section>
+
+
+  <br>
+  
+
+  <!-- Footer -->
+  <footer>
+    <h4>MONEY TEAM  &copy;  2019</h4>
+    <h4> Som Ramnani | Tony Kruso | Brent Abruzese | Darren Steverson   </h4>
+   
+ 
+  </footer>
+
+
+
+  <!-- AJAX library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+  <!-- jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  
+  <!-- Latest compiled JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+  <script src="javascript/scripts.js"></script>
+
+  </body>
+</html>

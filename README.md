@@ -1,6 +1,9 @@
 # Date Night
 A web app that finds your location and shows what events are happening that day.
 
+## Purpose
+To assist the average person in searching multiple activity options that are available in new and familiar places to make it easier to go out and have some fun with your significant other. 
+
 ## Languages/Tools Used
 - HTML5
 - CSS3
@@ -11,9 +14,8 @@ A web app that finds your location and shows what events are happening that day.
 - JSON
 - AJAX
 - API
-  - Google Maps
+  - Google Places
   - Yelp
-  - StubHub
   - EventBrite
 - JQuery
 - Firebase
@@ -22,7 +24,6 @@ A web app that finds your location and shows what events are happening that day.
 
 - Shows result based on your: 
   - Location 
-  - Radius
   - Interests
   - Budget
 - Shows the pricing of each event
@@ -30,8 +31,6 @@ A web app that finds your location and shows what events are happening that day.
   - Price
   - Rating
   - Image
-  - Peak time
-  - Hours
   
 
 

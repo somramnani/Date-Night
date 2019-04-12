@@ -82,7 +82,6 @@ html {
     background-size: cover;
     background-attachment: fixed;
     height: 800px;
-  
 	}
 
 	.parallax2{
@@ -110,6 +109,21 @@ html {
 	
 	img{
 		height: 1px;
+	}
+
+	.fa-thumbs-up{
+		font-size: 2em; 
+		color: lavender;
+		
+	}
+
+	.fa-thumbs-down{
+		font-size: 2em; 
+		color: lavender;
+
+	}
+	.buttonspanthumbsup{
+		padding-right:20px;
 	}
 
 /* ========================================================================== */ 

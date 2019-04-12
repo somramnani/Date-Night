@@ -1,7 +1,12 @@
 
 /* General Styles
 ========================================================================== */
-
+#thumbsDown{
+    background: rgb(39, 37, 37);
+}
+#thumbsUp{
+    background: rgb(54, 53, 53);
+}
 html {
     scroll-behavior: smooth;
   }

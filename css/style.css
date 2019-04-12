@@ -45,7 +45,7 @@ html {
     font-weight:bold; 
 	}
 	.restaurant-parralax{
-		padding-top: 5em;
+		padding-top: 10em;
 	} 
 
 /*========================================================================== */
@@ -105,7 +105,11 @@ html {
 		background-size: cover;
 		background-attachment: fixed;
 		height: 600px;
-  }
+	}
+	
+	img{
+		height: 1px;
+	}
 
 /* ========================================================================== */ 
 

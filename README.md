@@ -21,7 +21,6 @@ To assist the average person in searching multiple activity options that are ava
 - Firebase
 
 ## Features
-
 - Shows result based on your: 
   - Location 
   - Interests

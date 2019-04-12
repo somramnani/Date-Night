@@ -2,19 +2,23 @@
 /* General Styles
 ========================================================================== */
 
-#thumbsDown{
+	#thumbsDown{
     background: rgb(49, 47, 47);
-}
-#thumbsUp{
+	}
+	
+	#thumbsUp{
     background: rgb(49, 47, 47);
-}
-html {
-    scroll-behavior: smooth;
+	}
+	
+	html {
+		scroll-behavior: smooth;
+		height: 100%;
   }
 	 
 	body{
     background-color:black;
 		font-family: 'Cinzel', serif;
+		height: 100%;
     }
 
 	.container{
@@ -29,9 +33,17 @@ html {
 	}
 
 
-    .form-group1 {
-        visibility: hidden;
-      }
+  .form-group1 {
+      visibility: hidden;
+		}
+	
+	.hero-section{
+		height: 100%;
+	
+		background-size: cover;
+	}
+
+
 /* ========================================================================== */
 
 
@@ -45,7 +57,10 @@ html {
 	}
 	.restaurant-parralax{
 		padding-top: 10em;
-    } 
+		} 
+
+
+	
   
 /*========================================================================== */
 

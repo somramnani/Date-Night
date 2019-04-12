@@ -1,19 +1,16 @@
 
 /* General Styles
 ========================================================================== */
+
 #thumbsDown{
-    background: rgb(39, 37, 37);
+    background: rgb(49, 47, 47);
 }
 #thumbsUp{
-    background: rgb(54, 53, 53);
+    background: rgb(49, 47, 47);
 }
 html {
     scroll-behavior: smooth;
   }
-/* .navbar{
-    position: fixed;
-    width: 100%;
-} */
 	 
 	body{
     background-color:black;
@@ -48,8 +45,8 @@ html {
 	}
 	.restaurant-parralax{
 		padding-top: 10em;
-	} 
-
+    } 
+  
 /*========================================================================== */
 
 
@@ -85,10 +82,11 @@ html {
     background-size: cover;
     background-attachment: fixed;
     height: 800px;
+  
 	}
 
 	.parallax2{
-    background: url('../images/localevent.jpg') no-repeat center;
+    background: url('../images/filip-mroz-172351-unsplash.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     height: 600px;

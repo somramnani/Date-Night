@@ -1,24 +1,43 @@
 
 //__________________________________________________________
 //GLOBAL VARIABLES
-//__________________________________________________________
+
 
   //________________________________________________________
   //FIREBASE
   //________________________________________________________
 
-    var config = {
-      apiKey: "AIzaSyDfKpAiy7ngBuaxWEE57a-Fwddvw-kEEEU",
-      uthDomain: "date-night-e6b75.firebaseapp.com",
-      databaseURL: "https://date-night-e6b75.firebaseio.com",
-      projectId: "date-night-e6b75",
-      storageBucket: "date-night-e6b75.appspot.com",
-      messagingSenderId: "637265402446"
-    };
+  var config = {
+    apiKey: "AIzaSyA-JMhHh0tLhs_E9O9rzj8BqNen87VnaWQ",
+    authDomain: "date-night-83d1d.firebaseapp.com",
+    databaseURL: "https://date-night-83d1d.firebaseio.com",
+    projectId: "date-night-83d1d",
+    storageBucket: "date-night-83d1d.appspot.com",
+    messagingSenderId: "218794248533"
+  };
     
     firebase.initializeApp(config);
 
-  //________________________________________________________
+
+
+    var database = firebase.database();
+  //________________________________________________________ 
+  var tUp = 0;
+  var tDown= 0;
+   $("#thumbsUp").on("click", function(){
+     tUp++;
+     console.log(tUp);
+     database.ref().push({
+       tUp: tUp
+     })
+     console.log("END");
+   });
+   $("#thumbsDown").on("click", function(){
+     tDown++;
+     database.ref().push({
+       tDown: tDown
+     })
+   });
 
 
   //________________________________________________________

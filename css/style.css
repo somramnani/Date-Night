@@ -1,7 +1,12 @@
 
 /* General Styles
 ========================================================================== */
-
+#thumbsDown{
+    background: rgb(39, 37, 37);
+}
+#thumbsUp{
+    background: rgb(54, 53, 53);
+}
 html {
     scroll-behavior: smooth;
   }
@@ -9,13 +14,10 @@ html {
     position: fixed;
     width: 100%;
 } */
-   body{
-
+	 
+	body{
     background-color:black;
-
-		
 		font-family: 'Cinzel', serif;
-
     }
 
 	.container{
@@ -59,6 +61,7 @@ html {
     font-size: 100px;
 		color: white;
 		padding-top: 2em;
+		width: 90%;
 	}
 	#headerText{
     text-align: center;

@@ -2,6 +2,13 @@
 /* General Styles
 ========================================================================== */
 
+html {
+    scroll-behavior: smooth;
+  }
+/* .navbar{
+    position: fixed;
+    width: 100%;
+} */
    body{
 
     background-color:black;
@@ -23,7 +30,9 @@
 	}
 
 
-
+    .form-group1 {
+        visibility: hidden;
+      }
 /* ========================================================================== */
 
 

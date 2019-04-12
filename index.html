@@ -91,36 +91,33 @@
   </section>
 
   <br><br>
-    <!-- Location, Budget, Activites will be stored  -->
-    <section class="hero-section">
-
-  
+    
+  <!-- Location, Budget, Activites will be stored  -->
+  <section class="hero-section">
     <div class="container no-gutter">
-
-
       <form class>
         <div class="form-group">
           <label for="exampleFormControlInput1">Location</label>
-          <input type="location" class="form-control gps" id="location" placeholder="Zip Code OR City and State">
+          <input type="location" class="form-control gps" id="location" placeholder="Zip Code OR City and State">  
         </div>
+        
+        <!-- Activities Form -->
+        <div class="form-group">
+					<label for="exampleFormControlSelect2">Activities!</label>   
+	  
+          <br>
+            
+          <div class="input-group mb-3">
+          
+            <button type="button" class="btn btn-light restaurant_input" value = "Restaurants">Restaurants</button>     
+            &nbsp;     
+            <button type="button" class="btn btn-light theatres_input " value = "Theatres">Theatres</button>     
+            &nbsp;
+            <button type="button" class="btn btn-light localevents_input" value = "Local Events">Local Events</button>  
+          </div>
 
-
-          <!-- Activities Form -->
-          <div class="form-group">
-						<label for="exampleFormControlSelect2">Activities!</label>   
-						         
-						<br>
-						
-            <div class="input-group mb-3">
-							<button type="button" class="btn btn-light restaurant_input" value = "Restaurants">Restaurants</button>
-               &nbsp;
-							<button type="button" class="btn btn-light theatres_input " value = "Theatres">Theatres</button>
-               &nbsp;
-							<button type="button" class="btn btn-light localevents_input" value = "Local Events">Local Events</button>  
-          	</div>
-  
-          <!-- Activites Input -->
-          	<input type="text" class="form-control activities_entry" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">    
+          <!-- Activites Input -->           
+          <input type="text" class="form-control activities_entry" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">    
         </div>  
 
         <!-- Budget Form -->
@@ -138,27 +135,25 @@
               &nbsp;
               <button type="button" class="btn btn-light price4 button4" value ="$$$$">$$$$</button>
               &nbsp;
-              <button type="button" class="btn btn-light price5 button5" value ="$$$$$">$$$$$</button>
-          
-          
+              <button type="button" class="btn btn-light price5 button5" value ="$$$$$">$$$$$</button>        
             </div>
+          
           </div>
           
-          <!-- Price Input -->
-          <input type="text" class="form-control price_entry" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-      </form>	
+          <!-- Price Input -->          
+          <input type="text" class="form-control price_entry " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </form>	
   	  
-      <div class="container no-gutter">
-        <button type="button " class="btn btn-light" id ="submit" style = "display: block; margin: 0 auto;" id ="submit">Find your perfect date!</button>  
-      </div>
-
-  </div>  
-</section>
-  
+        <div class="container no-gutter">
+          <button onclick="window.location.href = '#restaurants_header';" type="button " class="btn btn-light scroll" href ="#restaurants_header" id ="submit">Find your perfect date!</button>  
+        </div>
+      </div>  
+  </section>
+  <div id="restaurants_header"></div>
  <!-- Restaraunts-->
-  <section>
+  <section >
     <!-- Restaraunt Header -->
-    <div class= "restaurant-parralax text-center "> 
+    <div class= "restaurant-parralax text-center" > 
       <h1 class = "activity-header">Restaurants</h1>            
     </div>
 

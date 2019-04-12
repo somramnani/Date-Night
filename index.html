@@ -38,20 +38,20 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Instructions
             </a>
+
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="#"><p>Enter your desired location, the search radius is 15 miles.</p> 
                 <p>Click what activity you want to do.</p>
-              <p>If you choose "Restaurants", please choose a budget.</p>
-
-              <p>You can click on your results to reach their webpage to learn more about them.</p>
-              <p>Scroll down below to see your results and enjoy perusing your options!</p>
-            
+                <p>If you choose "Restaurants", please choose a budget.</p>
+                <p>You can click on your results to reach their webpage to learn more about them.</p>
+                <p>Scroll down below to see your results and enjoy perusing your options!</p>
             </a>
             
             </div>
@@ -63,7 +63,7 @@
       <span class = "buttonspanthumbsup" >
         <i button type="button" id="thumbsUp" class="fas fa-thumbs-up"></i>
       </span>
-      
+
       <!-- Thumbs Down Button -->
       <span>
         <i button type="button" id="thumbsDown" class="fas fa-thumbs-down"></i>
@@ -72,15 +72,17 @@
     </nav>
 
     <!-- Parallax Header-->
-  <section id = "header">
-    <div class="parallaxHeader">
-      <h1 class="animated infinite pulse delay-5s header">Date Night Nirvana</h1>
-      <p id="headerText">The Ultimate Date Finder App</p>
-      <br>
-      <div class="main" id="section1">
+    <section id = "header">
+      <div class="parallaxHeader">
+        <h1 class="animated infinite pulse delay-5s header text-center">Date Night Nirvana</h1>
+        <p id="headerText">The Ultimate Date Finder App</p>
+        
         <br>
-      <a href="#section2" button type="button" class="btn btn-light" style = "display: block; margin: 0 auto; width: 10%">Get Started!</a>
-      </div>
+        
+        <div class="main" id="section1">
+          <br>
+          <a href="#section2" button type="button" class="btn btn-light" style = "display: block; margin: 0 auto; width: 10%">Get Started!</a>
+        </div>
   
     </div>
     <br>
@@ -90,11 +92,13 @@
 
   <br><br>
     <!-- Location, Budget, Activites will be stored  -->
+    <section class="hero-section">
 
-    <div class="container no-gutters">
+  
+    <div class="container no-gutter">
 
 
-      <form>
+      <form class>
         <div class="form-group">
           <label for="exampleFormControlInput1">Location</label>
           <input type="location" class="form-control gps" id="location" placeholder="Zip Code OR City and State">
@@ -136,21 +140,21 @@
               &nbsp;
               <button type="button" class="btn btn-light price5 button5" value ="$$$$$">$$$$$</button>
           
+          
+            </div>
           </div>
-          </div>
-            <!-- Price Input -->
-            <input type="text" class="form-control price_entry" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-      
-    </form>	
+          
+          <!-- Price Input -->
+          <input type="text" class="form-control price_entry" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </form>	
   	  
-
-    <div class="container no-gutter">
-      <button type="button " class="btn btn-light" id ="submit" style = "display: block; margin: 0 auto;" id ="submit">Find your perfect date!</button>  
-    </div>
+      <div class="container no-gutter">
+        <button type="button " class="btn btn-light" id ="submit" style = "display: block; margin: 0 auto;" id ="submit">Find your perfect date!</button>  
+      </div>
 
   </div>  
-  <br>
-
+</section>
+  
  <!-- Restaraunts-->
   <section>
     <!-- Restaraunt Header -->

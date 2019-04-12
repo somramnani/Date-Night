@@ -61,12 +61,10 @@
   //________________________________________________________
     
     //Activity Button value variables 
-    var activities1 = $(".activities1").val();
-    var activities2 = $(".activities2").val();
-    var activities3 = $(".activities3").val();
-    var activities4 = $(".activities4").val();
-    var activities5 = $(".activities5").val();
-    
+    var restaurantButton = $(".restaurant_input").val();
+    var theaterButton = $(".theatres_input").val();
+    var localEventButton = $(".localevents_input").val();
+        
     // Activity button input field
 		var activityEntry = $(".activities_entry");
   //________________________________________________________
@@ -112,25 +110,17 @@
     
     //If one of the activities is selected, then make the input value(priceEntry) value that price  
 
-    $(".activities1").on("click", function(){
-      activityEntry.attr("value", activities1);
+    $(".restaurant_input").on("click", function(){
+      activityEntry.attr("value", restaurantButton);
     })
 
-    $(".activities2").on("click", function(){
-      activityEntry.attr("value", activities2);
+    $(".theatres_input").on("click", function(){
+      activityEntry.attr("value", theaterButton);
     })
 
-    $(".activities3").on("click", function(){
-      activityEntry.attr("value", activities3);
+    $(".localevents_input").on("click", function(){
+      activityEntry.attr("value", localEventButton);
     })
-
-    $(".activities4").on("click", function(){
-      activityEntry.attr("value", activities4);
-    })
-
-    $(".activities5").on("click", function(){
-      activityEntry.attr("value", activities5);
-		})
     
   //______________________________________________________
 

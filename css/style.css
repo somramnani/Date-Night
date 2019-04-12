@@ -3,13 +3,12 @@
 ========================================================================== */
 
    body{
-<<<<<<< HEAD
-		background-color:black;
-		font-family: 'Cinzel', serif;
-=======
 
     background-color:black;
->>>>>>> 6259fbbab7cac3731e2dd89c24d0d4b096a2e744
+
+		
+		font-family: 'Cinzel', serif;
+
     }
 
 	.container{

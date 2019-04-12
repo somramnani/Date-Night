@@ -52,15 +52,12 @@
 ==========================================================================  */
 	.activity-header , .header{
     color:white;
-
     font-weight:bold; 
 	}
+
 	.restaurant-parralax{
-		padding-top: 10em;
-		} 
-
-
-	
+		padding-top: 5em;
+	} 
   
 /*========================================================================== */
 
@@ -153,6 +150,12 @@
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     padding: 3px;
+	}
+
+	#submit{
+		display: block; 
+		margin: 0 auto;
+
 	}
 
 /* ========================================================================== */

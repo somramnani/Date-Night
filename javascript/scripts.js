@@ -15,30 +15,30 @@
       storageBucket: "date-night-83d1d.appspot.com",
       messagingSenderId: "218794248533"
     };
-    
     firebase.initializeApp(config);
 
-
-
     var database = firebase.database();
+    var tUp = 0;
+    var tDown= 0;
+
+    $("#thumbsUp").on("click", function(){
+      tUp++;
+      console.log(tUp);
+      database.ref().push({
+        tUp: tUp
+      })
+
+      console.log("END");
+
+      });
+      
+    $("#thumbsDown").on("click", function(){
+      tDown++;
+      database.ref().push({
+        tDown: tDown
+        })
+      });
   //________________________________________________________ 
-  
-  var tUp = 0;
-  var tDown= 0;
-   $("#thumbsUp").on("click", function(){
-     tUp++;
-     console.log(tUp);
-     database.ref().push({
-       tUp: tUp
-     })
-     console.log("END");
-   });
-   $("#thumbsDown").on("click", function(){
-     tDown++;
-     database.ref().push({
-       tDown: tDown
-     })
-   });
 
 
   //________________________________________________________
@@ -131,7 +131,8 @@
   //______________________________________________________
 
     $("#submit").on("click", function() {
-      
+    
+        
       // The input value of activities
 		  var priceEntryValue = $(".price_entry").val();
       console.log(priceEntryValue);

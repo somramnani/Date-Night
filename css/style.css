@@ -55,8 +55,8 @@
     font-weight:bold; 
 	}
 
-	.restaurant-parralax{
-		padding-top: 5em;
+	.activity-header{
+		padding-top: 2em;
 	} 
   
 /*========================================================================== */
@@ -184,6 +184,7 @@
   #getstartedbutton {
     width: 40%;
   }
+}
 
 
 

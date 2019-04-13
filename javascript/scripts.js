@@ -98,6 +98,10 @@ $("#thumbsDown").on("click", function() {
   $(".price4").on("click", function(){
     priceEntry.attr("value", "4");
   })
+
+  $(".price5").on("click", function(){
+    priceEntry.attr("value", "5");
+  })
   
 //________________________________________________________
 

@@ -7,7 +7,7 @@
     <meta name="description" content="Project 1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" type="image/png" href="images/calender-favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon-calendar-check-o.ico">
 
     <!-- **************Bootstrap Links************** -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -41,20 +41,36 @@
 
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
+          
+          <!-- Instruction Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Instructions
             </a>
-
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#"><p>Enter your desired location </p> 
+              <a class="dropdown-item" ><p>Enter your desired location </p> 
                 <p>The search radius is 15 miles.</p> 
                 <p>Please choose a budget.</p>
                 <p>Submit your inputs!</p>
             </a>
-            
             </div>
           </li>
+
+          <!-- Restaraunts Nav Item -->
+          <li class="nav-item">
+            <a class="nav-link scroll"  href="#restaurants_header">Restaraunts <span class="sr-only">(current)</span></a>
+          </li>
+          
+          <!-- Theatres Nav Item -->
+          <li class="nav-item">
+            <a class="nav-link scroll" href="#theatre_header">Theatres <span class="sr-only">(current)</span></a>
+          </li>
+
+          <!-- Local Events Nav Item -->
+          <li class="nav-item">
+              <a class="nav-link scroll" href="#localevents_header">Local Events <span class="sr-only">(current)</span></a>
+            </li>
+
         </ul>
       </div>
       
@@ -102,11 +118,9 @@
         
         <!-- Activities Form -->
         <div class="form-group">
-			  
-	  
-          <br>
-      
-
+          
+        <br>
+  
         <!-- Budget Form -->
         <div class="form-group">
           <label for="exampleFormControlSelect1">What is your budget?</label>
@@ -136,9 +150,10 @@
         </div>
       </div>  
   </section>
-  <div id="restaurants_header"></div>
- <!-- Restaraunts-->
-  <section >
+
+ 
+  <!-- Restaraunts-->
+  <section id="restaurants_header" >
     <!-- Restaraunt Header -->
     <div class= "restaurant-parralax text-center" > 
       <h1 class = "activity-header">Restaurants</h1>            
@@ -150,7 +165,7 @@
   </section>
 
   <!-- Theatre-->
-  <section>
+  <section id="theatre_header"> 
     <!-- Theatre Header -->
     <div class= "theatre-parralax text-center"> 
       <h1 class = "activity-header">Theatres</h1>            
@@ -160,9 +175,10 @@
     <div class="parallax5 img-responsive "></div>    
     <br>
   </section>
-
- <!-- Local-Events -->
-  <section>
+  
+  <!-- Local-Events -->
+  <div id=""></div>
+  <section id ="localevents_header">
     
     <!-- Local Events Header -->
     <div class= "sport-parralax text-center"> 

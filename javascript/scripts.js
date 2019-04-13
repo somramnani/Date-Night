@@ -231,7 +231,7 @@ $("#thumbsDown").on("click", function() {
               var eventCardText = $("<p>").addClass("card-text font-weight-light mx-2").html("Venue: " + eventVenue);
               var eventCardList = $("<ul>").addClass("list-group list-group-flush");
               var eventCardListItem = $("<li>").addClass("list-group-item").html("Description: " + eventDescription);
-              var eventCardLink = $("<a>").addClass("btn btn-success").html("Learn More At EventBrite!").attr("href", eventLink);
+              var eventCardLink = $("<a>").addClass("btn btn-success").html("Learn More At EventBrite!").attr("href", eventLink).attr("target", "_blank");
 
               var eventResultCard = eventCardContainer.append(eventCardImg,eventCardBody,eventCardTitle,eventCardText,eventCardList,eventCardListItem,eventCardLink);
 
@@ -250,11 +250,13 @@ $("#thumbsDown").on("click", function() {
           var movieTheatersRow = $("#theater-results");
 
           for(var i = 0; i < response.results.length; i++) {
+            console.log(response.results);
 
+            
             var theaterName = response.results[i].name;
             var theaterAddress = response.results[i].formatted_address;
             var theaterRating = response.results[i].rating;
-            var theaterThumbnail = "/Users/brentabruzese/Dropbox/Date-Night/images/cinema.png";
+            var theaterThumbnail = "images/theatrethumbnail.jpg";
 
             var theaterCol = $("<div>").addClass("col-md-4");
             var cardContainer = $("<div>").addClass("card m-2").attr("style", "width: 16rem");
@@ -264,7 +266,7 @@ $("#thumbsDown").on("click", function() {
             var cardText = $("<p>").addClass("card-text font-weight-light mx-2").html("Address: " + theaterAddress);
             var cardList = $("<ul>").addClass("list-group list-group-flush");
             var cardListItem = $("<li>").addClass("list-group-item").html("Theater Rating: " + "<strong>" + theaterRating + "</strong>");
-            var cardLink = $("<a>").addClass("card-link").html("Visit Online At: " + "<strong>" + "www.whatever.com" + "</strong>");
+            var cardLink = $("<a>").addClass("card-link").html("Visit Online At: " + "<strong>" + "www.whatever.com" + "</strong>").attr("target", "_blank");
 
             var movieResultCard = cardContainer.append(cardImg,cardBody,cardTitle,cardText,cardList,cardListItem,cardLink);
 

@@ -172,6 +172,8 @@ $("#thumbsDown").on("click", function() {
             for(var i = 0; i < response.businesses.length; i++) {
               var restaurantDiv = $("#rest-results");
               var restPrice = response.businesses[i].price;
+              var restCity = response.businesses[i].location.city;
+              var restState = response.businesses[i].location.state;
               var restImage = response.businesses[i].image_url;
               var webURL = response.businesses[i].url;
               var name = response.businesses[i].name;
@@ -182,7 +184,7 @@ $("#thumbsDown").on("click", function() {
               var restCardImg = $("<img>").addClass("card-img-top h-50").attr("src", restImage).attr("alt", "restaurant-pic");
               var restCardBody = $("<div>").addClass("card-body");
               var restCardTitle = $("<h5>").addClass("card-header").html(name);
-              var restCardText = $("<p>").addClass("card-text font-weight-light mx-2").text("Address:");
+              var restCardText = $("<p>").addClass("card-text font-weight-light mx-2").text(restCity + ", " + restState);
               var restCardList = $("<ul>").addClass("list-group list-group-flush");
               var restCardListItem = $("<li>").addClass("list-group-item").html("User Rating: " + rating);
               var restCardListItem2 = $("<li>").addClass("list-group-item").html("Price Range: " + restPrice);

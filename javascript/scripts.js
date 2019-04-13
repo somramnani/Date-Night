@@ -80,23 +80,32 @@ $("#thumbsDown").on("click", function() {
 //________________________________________________________
 //Price Button On-Click Functions
 //________________________________________________________
-  
+  var userBudget;
   //If one of the $ is selected, then make the input value(priceEntry) value that price
 
   $(".price1").on("click", function(){
     priceEntry.attr("value", "1");
+    userBudget = priceEntry.val();
   })
 
   $(".price2").on("click", function(){
     priceEntry.attr("value", "2");
+    userBudget = priceEntry.val();
   })
   
   $(".price3").on("click", function(){
     priceEntry.attr("value", "3");
+    userBudget = priceEntry.val();
   })
   
   $(".price4").on("click", function(){
     priceEntry.attr("value", "4");
+    userBudget = priceEntry.val();
+  })
+
+  $(".price5").on("click", function(){
+    priceEntry.attr("value", "5");
+    userBudget = priceEntry.val();
   })
 
   $(".price5").on("click", function(){
@@ -111,25 +120,6 @@ $("#thumbsDown").on("click", function() {
 //________________________________________________________
   
   //If one of the activities is selected, then make the input value(priceEntry) value that price  
-  var activityArray = [];
-
-  $(".restaurant_input").on("click", function(){
-    activityEntry.attr("value", "restaurant");
-    activityArray.push(activityEntry.val());
-    console.log(activityArray);
-  })
-
-  $(".theatres_input").on("click", function(){
-    activityEntry.attr("value", "theatres");
-    activityArray.push(activityEntry.val());
-    console.log(activityArray);
-  })
-
-  $(".localevents_input").on("click", function(){
-    activityEntry.attr("value", "local-events");
-    activityArray.push(activityEntry.val());
-    console.log(activityArray);
-  })
   
 //______________________________________________________
 
@@ -140,7 +130,6 @@ $("#thumbsDown").on("click", function() {
 
   $("#submit").on("click", function() {
     event.preventDefault();
-    var priceMan = $(".price1").val();
     // This is the input value of activities:
     var activityEntryValue = $(".activities_entry").val();
     console.log(activityEntryValue);
@@ -155,7 +144,7 @@ $("#thumbsDown").on("click", function() {
     //______________________________________________________
       
       var yelpAPIKey = "V3BqWR13gf4DYXvRewAG0jVi7K7Xy-yLxjzRTFA29eZPdSiS1aFqyxVXq1PNP2e_m4Xl8cDdypAroctE4HFsP0ZY7_oGX0Xmvm7kZ6_WtTMAqCx2k_qljY0j3qymXHYx"
-      var yelpURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + addressInput + "&limit=6&price=" + priceMan;
+      var yelpURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + addressInput + "&limit=6&price=" + userBudget;
       
       var eventSearchURL = "https://cors-anywhere.herokuapp.com/https://www.eventbriteapi.com/v3/events/search?location.address=" + addressInput + "&expand=ticket_classes&expand=venue&token=QHHRQKYP5TZBK3NVPHD2";
       
@@ -246,9 +235,7 @@ $("#thumbsDown").on("click", function() {
           method: "GET",
           dataType: 'json'
         }).then(function(response) {
-
           var movieTheatersRow = $("#theater-results");
-
           for(var i = 0; i < response.results.length; i++) {
             console.log(response.results);
 

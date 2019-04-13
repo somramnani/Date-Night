@@ -266,9 +266,9 @@ $("#thumbsDown").on("click", function() {
             var cardText = $("<p>").addClass("card-text font-weight-light mx-2").html("Address: " + theaterAddress);
             var cardList = $("<ul>").addClass("list-group list-group-flush");
             var cardListItem = $("<li>").addClass("list-group-item").html("Theater Rating: " + "<strong>" + theaterRating + "</strong>");
-            var cardLink = $("<a>").addClass("card-link").html("Visit Online At: " + "<strong>" + "www.whatever.com" + "</strong>").attr("target", "_blank");
+           
 
-            var movieResultCard = cardContainer.append(cardImg,cardBody,cardTitle,cardText,cardList,cardListItem,cardLink);
+            var movieResultCard = cardContainer.append(cardImg,cardBody,cardTitle,cardText,cardList,cardListItem);
 
             movieTheatersRow.append(theaterCol);
             theaterCol.append(movieResultCard);

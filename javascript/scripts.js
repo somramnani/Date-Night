@@ -181,7 +181,7 @@ $("#thumbsDown").on("click", function() {
 
               var restCol = $("<div>").addClass("col-md-4");
               var restCardContainer = $("<div>").addClass("card m-2").attr("style", "width: 18rem");
-              var restCardImg = $("<img>").addClass("card-img-top h-50").attr("src", restImage).attr("alt", "restaurant-pic");
+              var restCardImg = $("<img>").addClass("card-img-top h-auto").attr("src", restImage).attr("alt", "restaurant-pic");
               var restCardBody = $("<div>").addClass("card-body");
               var restCardTitle = $("<h5>").addClass("card-header").html(name);
               var restCardText = $("<p>").addClass("card-text font-weight-light mx-2").text(restCity + ", " + restState);
@@ -216,7 +216,7 @@ $("#thumbsDown").on("click", function() {
 
               var eventCol = $("<div>").addClass("col-md-4");
               var eventCardContainer = $("<div>").addClass("card m-2").attr("style", "width: 15rem");
-              var eventCardImg = $("<img>").addClass("card-img-top h-50").attr("alt", "image").attr("src", eventPic);
+              var eventCardImg = $("<img>").addClass("card-img-top h-auto").attr("alt", "image").attr("src", eventPic);
               var eventCardBody = $("<div>").addClass("card-body");
               var eventCardTitle = $("<h5>").addClass("card-header").html(eventName);
               var eventCardText = $("<p>").addClass("card-text font-weight-light mx-2").html("Venue: " + eventVenue);
@@ -249,7 +249,7 @@ $("#thumbsDown").on("click", function() {
 
             var theaterCol = $("<div>").addClass("col-md-4");
             var cardContainer = $("<div>").addClass("card m-2").attr("style", "width: 16rem");
-            var cardImg = $("<img>").addClass("card-img-top h-50").attr("alt", "image").attr("src", theaterThumbnail);
+            var cardImg = $("<img>").addClass("card-img-top h-auto").attr("alt", "image").attr("src", theaterThumbnail);
             var cardBody = $("<div>").addClass("card-body");
             var cardTitle = $("<h5>").addClass("card-header").html(theaterName);
             var cardText = $("<p>").addClass("card-text font-weight-light mx-2").html("Address: " + theaterAddress);

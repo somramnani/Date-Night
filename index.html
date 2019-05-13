@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Date Night</title>
     <meta name="description" content="Project 1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
 
     <link rel="icon" type="image/png" href="images/favicon-calendar-check-o.ico">
 
@@ -25,14 +25,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <!-- style.css link -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
   </head>
   
 
   <body>
     <div id="top"></div>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
-      <a class="navbar-brand" href="#top">DATE NIGHT NIRVANA</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top style" >
+      <a class="navbar-brand navbartitle" href="#top">DATE NIGHT NIRVANA</a>
       
       <!-- Hamburger Button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +41,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ml-auto">
           
           <!-- Instruction Dropdown -->
           <li class="nav-item dropdown">
@@ -58,37 +59,44 @@
 
           <!-- Restaraunts Nav Item -->
           <li class="nav-item">
-            <a class="nav-link scroll"  href="#restaurants_header">Restaurants <span class="sr-only">(current)</span></a>
+            <a class="nav-link scroll"  href="#rest-results">Restaurants <span class="sr-only">(current)</span></a>
           </li>
           
           <!-- Theatres Nav Item -->
           <li class="nav-item">
-            <a class="nav-link scroll" href="#theatre_header">Theatres <span class="sr-only">(current)</span></a>
+            <a class="nav-link scroll" href="#theater-results">Theatres <span class="sr-only">(current)</span></a>
           </li>
 
           <!-- Local Events Nav Item -->
           <li class="nav-item">
               <a class="nav-link scroll" href="#localevents_header">Local Events <span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item">
+                <span class = "buttonspanthumbsup" >
+                    <i button type="button" id="thumbsUp" class="fas fa-thumbs-up"></i>
+                  </span>
+          
+                  <!-- Thumbs Down Button -->
+                  <span>
+                    <i button type="button" id="thumbsDown" class="fas fa-thumbs-down"></i>
+                  </span>
+    
+            </li>
 
         </ul>
+   
       </div>
       
-      <!-- Thumbs Up Button -->
-      <span class = "buttonspanthumbsup" >
-        <i button type="button" id="thumbsUp" class="fas fa-thumbs-up"></i>
-      </span>
-
-      <!-- Thumbs Down Button -->
-      <span>
-        <i button type="button" id="thumbsDown" class="fas fa-thumbs-down"></i>
-      </span>
+      <section class="thumbsbutton">
+        <!-- Thumbs Up Button -->
+       
+    </section>
     
     </nav>
 
     <!-- Parallax Header-->
     <section id = "header">
-      <div class="parallaxHeader">
+      <div class="parallaxHeader text-center">
         <h1 class="animated infinite pulse headertext text-center" id = "headerMainText">Date Night Nirvana</h1>
         <p id="headerText">The Ultimate Date Finder App</p>
         
@@ -146,7 +154,7 @@
         </form>	
   	  
         <div class="container no-gutter">
-          <button onclick="window.location.href = '#restaurants_header';" type="button " class="btn btn-light scroll" href ="#restaurants_header" id ="submit">Find your perfect date!</button>  
+          <button onclick="window.location.href = '#rest-results';" type="button " class="btn btn-light scroll" href ="#restaurants_header" id ="submit">Find your perfect date!</button>  
         </div>
       </div>  
   </section>
@@ -165,6 +173,7 @@
     
     <!-- Restaraunts Results -->
     <div class="row" id="rest-results"></div>           
+    <br>
     <br>
   </section>
 

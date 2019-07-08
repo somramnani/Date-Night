@@ -33,8 +33,8 @@
     <div id="top" class = ""></div>
     <!-- Navbar -->
     <div class="background-image">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top style bg-transparent navbar" >
-      <a class="navbar-brand navbartitle" href="#top">DATE NIGHT NIRVANA</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top style bg-transparent animated" >
+      <a class="navbar-brand navbartitle" href="#top">DATE NIGHT</a>
       
       <!-- Hamburger Button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,8 +45,8 @@
         <ul class="navbar-nav ml-auto">
           
           <!-- Instruction Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Instructions
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -59,8 +59,8 @@
           </li>
 
           <!-- Restaraunts Nav Item -->
-          <li class="nav-item">
-            <a class="nav-link scroll"  href="#rest-results">Restaurants <span class="sr-only">(current)</span></a>
+          <li class="nav-item white">
+            <a class="nav-link scroll white"  href="#rest-results">Restaurants <span class="sr-only">(current)</span></a>
           </li>
           
           <!-- Theatres Nav Item -->
@@ -94,7 +94,7 @@
       <!-- HERO IMAGE CONTENT -->
       <div class="text-center homepageContent">
         <h1 id = "main-header-text">Date Night</h1>
-        <p id="headerText"> The Ultimate Date Finder App</p>
+        <p id="headerText"> The Ultimate Date night Finder App</p>
         <div class="main" id="section1">
           <br>
           <a href="#section2" button type="button" class="btn btn-light" id = "getstartedbutton" >Get Started!</a>
@@ -124,9 +124,9 @@
   <br><br>
   <div class="main" id="section2"></div>
   <!-- Location, Budget, Activites will be stored  -->
-  <section class="hero-section">
+  <section class="hero-section ">
     <div class="container no-gutter">
-      <form class>
+      <form class ="userinformation">
         <div class="form-group">
           <label for="exampleFormControlInput1">Location</label>
           <input type="location" class="form-control gps" id="location" placeholder="Zip Code OR City and State">  
@@ -161,7 +161,7 @@
           <input type="text" class="form-control price_entry " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </form>	
   	  
-        <div class="container no-gutter">
+        <div class="submit-button ">
           <button onclick="window.location.href = '#rest-results';" type="button " class="btn btn-light scroll" href ="#restaurants_header" id ="submit">Find your perfect date!</button>  
         </div>
       </div>  

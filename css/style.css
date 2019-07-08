@@ -30,6 +30,7 @@
 		margin-bottom: 25px;
 		justify-content: center;
 		border-radius: 25px;
+		transform: translateY(8em);
 	}
 
   .form-group1 {
@@ -41,6 +42,23 @@
 	
 		background-size: cover;
 	}
+
+	.animated{ 
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both; 
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -ms-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 1s;
+  }  
+	
+
+
+
 
 
 /* ========================================================================== */
@@ -64,13 +82,7 @@
 
 /* Text Styles
 ========================================================================== */ 
-	.animated{
-    text-align: center;
-    font-size: 100px;
-		color: white;
-		padding-top: 2em;
-		width: 90%;
-	}
+
 	#headerText{
     text-align: center;
     font-size: 25px;
@@ -92,8 +104,16 @@
 		font-weight:bolder;
 		letter-spacing: 30px;
 	}
-
+	.navbar-dark .navbar-nav .nav-link {
+		color: white;
+	}
 	
+	#headerText{
+		font-weight: bolder;
+		letter-spacing: 5px;
+	}
+
+
 /* ========================================================================== */ 
 
 
@@ -109,7 +129,7 @@
 	} */
 
 	.background-image{
-		background-image: url("../images/datenight5.jpg");
+		background-image: url("../images/datenight3.jpg");
 		background-repeat: no-repeat; /* Do not repeat the image */
 		background-size: cover;
 		height: 100vh;
@@ -178,7 +198,12 @@
 	#submit{
 		display: block; 
 		margin: 0 auto;
-  }
+
+	}
+	
+	.submit-button{
+		padding-top: 20px;
+	}
   #getstartedbutton{
     display: block; margin: 0 auto; 
     width: 10%;

@@ -25,12 +25,12 @@ $(function() {
       if (scroll >= 569.5999755859375) {
 
         header.addClass("fixed-top fadeInDown");
-        header.removeClass("bg-transparent");
+        header.removeClass("bg-transparent fadeInUp");
 
       } 
       else {
-        // header.removeClass("fixed-top fadeInDown ");
-        header.addClass("bg-transparent");			
+        header.removeClass("fixed-top fadeInDown ");
+        header.addClass("bg-transparent fadeInUp");			
       }
     }
     

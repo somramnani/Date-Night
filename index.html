@@ -30,9 +30,10 @@
   
 
   <body>
-    <div id="top"></div>
+    <div id="top" class = ""></div>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top style" >
+    <div class="background-image">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top style bg-transparent navbar" >
       <a class="navbar-brand navbartitle" href="#top">DATE NIGHT NIRVANA</a>
       
       <!-- Hamburger Button -->
@@ -72,32 +73,39 @@
               <a class="nav-link scroll" href="#localevents_header">Local Events <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <span class = "buttonspanthumbsup" >
+                
+              <!-- <span class = "buttonspanthumbsup" >
                     <i button type="button" id="thumbsUp" class="fas fa-thumbs-up"></i>
-                  </span>
+                  </span> -->
           
                   <!-- Thumbs Down Button -->
-                  <span>
+                  <!-- <span>
                     <i button type="button" id="thumbsDown" class="fas fa-thumbs-down"></i>
                   </span>
-    
+     -->
             </li>
-
-        </ul>
-   
-      </div>
+          </ul>
+        </div>
       
-      <section class="thumbsbutton">
-        <!-- Thumbs Up Button -->
-       
-    </section>
-    
-    </nav>
+        <!-- Thumbs button -->
+        <!-- <section class="thumbsbutton"> </section> -->
+      </nav>
+
+      <!-- HERO IMAGE CONTENT -->
+      <div class="text-center homepageContent">
+        <h1 id = "main-header-text">Date Night</h1>
+        <p id="headerText"> The Ultimate Date Finder App</p>
+        <div class="main" id="section1">
+          <br>
+          <a href="#section2" button type="button" class="btn btn-light" id = "getstartedbutton" >Get Started!</a>
+        </div>
+      </div>
+    </div>
 
     <!-- Parallax Header-->
-    <section id = "header">
+    <!-- <section id = "header">
       <div class="parallaxHeader text-center">
-        <h1 class="animated infinite pulse headertext text-center" id = "headerMainText">Date Night Nirvana</h1>
+        <h1 class="animated headertext text-center" id = "headerMainText">Date Night Nirvana</h1>
         <p id="headerText"> The Ultimate Date Finder App</p>
         
         <br>
@@ -111,10 +119,10 @@
     <br>
     <div class="main" id="section2"></div>
     <br>
-  </section>
+  </section> -->
 
   <br><br>
-    
+  <div class="main" id="section2"></div>
   <!-- Location, Budget, Activites will be stored  -->
   <section class="hero-section">
     <div class="container no-gutter">
@@ -236,6 +244,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
   <script src="javascript/scripts.js"></script>
+  <script src="javascript/logic.js"></script>
 
   </body>
 </html>

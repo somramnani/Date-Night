@@ -62,7 +62,7 @@
 
 
 
-/* Font Styles
+/* Text Styles
 ========================================================================== */ 
 	.animated{
     text-align: center;
@@ -81,6 +81,19 @@
     font-size: 75px;
     color: white;
 	}
+
+	.homepageContent{
+		transform: translateY(10em);
+		text-transform: uppercase;
+		color: white;
+	}
+	#main-header-text{
+		font-size: 6em;
+		font-weight:bolder;
+		letter-spacing: 30px;
+	}
+
+	
 /* ========================================================================== */ 
 
 
@@ -88,11 +101,22 @@
 
 /* Image Styles
 ========================================================================== */ 
-	.parallaxHeader{
+	/* .parallaxHeader{
     background: url('../images/valentin-antonucci-799200-unsplash.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     height: 800px;
+	} */
+
+	.background-image{
+		background-image: url("../images/datenight5.jpg");
+		background-repeat: no-repeat; /* Do not repeat the image */
+		background-size: cover;
+		height: 100vh;
+		background-attachment: fixed;
+		background-position: center;
+		opacity: 1;
+
 	}
 
 	.parallax2{

@@ -6,10 +6,6 @@
       font-size: 4.5em;
     }
 
-   
-  
-
-
 
 /* ========================================================================== */  
 
@@ -17,21 +13,21 @@
 /* Specific Phone Mobile Styles
 ========================================================================== */
 
-/* Galaxy S5 */
-@media (min-width:360px) and (max-width:360px) {
-  #headerMainText{
-    font-size: 4.5em;
-    text-align: center;
-    padding-left: 15px;
+  /* Galaxy S5 */
+  @media (min-width:360px) and (max-width:360px) {
+    #headerMainText{
+      font-size: 4.5em;
+      text-align: center;
+      padding-left: 15px;
 
+      
     
-   
-}
+  }
 
-/* iPhone 5/SE */
-@media (min-width:320px) and (max-width:320px) {
+  /* iPhone 5/SE */
+  @media (min-width:320px) and (max-width:320px) {
   #headerMainText{
-    font-size: 2em;
+    font-size: 15em;
   }
 
   .navbartitle{
@@ -40,7 +36,7 @@
     
 
 
-}  
+  }  
 
 
 
@@ -54,8 +50,10 @@
 
   /* iPhone 6,7, & Plus */
   @media only screen  and (min-width : 414px) and (max-width : 736px) {
-   
-    }
+   #headerMainText{
+     transform: translateY(10em);
+   }
+  }
   
 
 

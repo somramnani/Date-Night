@@ -55,7 +55,9 @@
     -o-animation-duration: 2s;
     animation-duration: 1s;
   }  
-	
+	.displaynone{
+		display: none;
+	}
 
 
 
@@ -75,6 +77,9 @@
 	.activity-header{
 		padding-top: 2em;
 	} 
+	#navbarNavDropdown{
+		font-size: 20px;
+	}
   
 /*========================================================================== */
 

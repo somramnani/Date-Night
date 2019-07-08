@@ -135,6 +135,7 @@ $("#thumbsDown").on("click", function() {
     console.log(activityEntryValue);
 
     var addressInput = $("#location").val().trim();
+    
     if(addressInput === "") {
       alert("Location is required");
       event.preventDefault();
@@ -143,7 +144,7 @@ $("#thumbsDown").on("click", function() {
     //API VARIABLES
     //______________________________________________________
       
-      var yelpAPIKey = "V3BqWR13gf4DYXvRewAG0jVi7K7Xy-yLxjzRTFA29eZPdSiS1aFqyxVXq1PNP2e_m4Xl8cDdypAroctE4HFsP0ZY7_oGX0Xmvm7kZ6_WtTMAqCx2k_qljY0j3qymXHYx"
+      var yelpAPIKey = "t915wybDO3WP4B26tfMQd3AfvQQNFnODtP3EvVzYdhWW58RNwjSwA6OEt2mFI4zaWOwMFHgEr9Pzf3sXFiR_VooC8dfCEBqMR2MtifV8r-JEgaDpoOdQ9RcRE4sjXXYx"
       var yelpURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + addressInput + "&limit=6&price=" + userBudget;
       
       var eventSearchURL = "https://cors-anywhere.herokuapp.com/https://www.eventbriteapi.com/v3/events/search?location.address=" + addressInput + "&expand=ticket_classes&expand=venue&token=QHHRQKYP5TZBK3NVPHD2";

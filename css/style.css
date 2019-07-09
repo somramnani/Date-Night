@@ -21,17 +21,7 @@
 		height: 100%;
     }
 
-	.container{
-		max-width: 960px;
-		margin: 0 auto;
-		background:lavender;
-		font-size: 24 px;
-		padding: 25px;
-		margin-bottom: 25px;
-		justify-content: center;
-		border-radius: 25px;
-		transform: translateY(8em);
-	}
+
 
   .form-group1 {
     visibility: hidden;
@@ -57,6 +47,17 @@
   }  
 	.displaynone{
 		display: none;
+	}
+	.container{
+		max-width: 960px;
+		margin: 0 auto;
+		background:lavender;
+		font-size: 24 px;
+		padding: 25px;
+		margin-bottom: 25px;
+		justify-content: center;
+		border-radius: 25px;
+		transform: translateY(8em);
 	}
 
 
@@ -148,14 +149,16 @@
     background: url('../images/filip-mroz-172351-unsplash.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    height: 600px;
+	
+
 	}
 
 	.parallax3{
     background: url('../images/matthieu-huang-549064-unsplash.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    height: 600px;
+		height: 600px;
+		width: 400px;
 	}
 
 

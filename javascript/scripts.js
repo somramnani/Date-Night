@@ -160,6 +160,7 @@ $("#thumbsDown").on("click", function() {
       // YELP API
       $.ajax({
         url: yelpURL,
+        cache: true,
         headers: {
           'Authorization': 'Bearer ' + yelpAPIKey,    
         },

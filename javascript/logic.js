@@ -1,43 +1,25 @@
-//__________________________________________________________
-//GLOBAL VARIABlES
-//__________________________________________________________
-  var header = $(".navbar");
- 
-  var startButton = $("#getstartedbutton");
+var header = $(".navbar");
 
-
-
-
-//__________________________________________________________
-
-
+var startButton = $("#getstartedbutton");
 //__________________________________________________________
 //ANIMATION FUNCTIONS
 //__________________________________________________________
 
-$(function() {  
-    
-  $(window).scroll(function() {    
+$(function () {
+
+  $(window).scroll(function () {
     var scroll = $(window).scrollTop();
     // console.log(scroll);
 
-    function displayNavBar(){
+    function displayNavBar() {
       if (scroll >= 569.5999755859375) {
-
         header.addClass("fixed-top fadeInDown");
         header.removeClass("bg-transparent fadeInUp");
-
-      } 
-      else {
+      } else {
         header.removeClass("fixed-top fadeInDown ");
-        header.addClass("bg-transparent fadeInUp");			
+        header.addClass("bg-transparent fadeInUp");
       }
     }
-    
     displayNavBar();
-
-    
   });
 });
-
-//__________________________________________________________
